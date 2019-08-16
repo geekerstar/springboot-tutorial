@@ -11,6 +11,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <!--	一旦 pom.xml 文件中包含了上述配置，Spring Boot 应用将默认包含如下功能：-->
+
+    <!--	1.依赖管理功能（Spring Boot 自动管理包版本依赖）；-->
+    <!--	2.相关默认值设置：-->
+    <!--	2.1 默认的 Java 版本号；-->
+    <!--	2.2 资源文件编码格式；-->
+    <!--	2.3 资源过滤等；-->
+    <!--	3.插件管理；-->
     <groupId>com.geekerstar</groupId>
     <artifactId>springboot-helloworld</artifactId>
 
@@ -19,10 +27,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -35,6 +39,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <!-- SpringBoot自带热加载开发工具 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -42,4 +52,13 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
