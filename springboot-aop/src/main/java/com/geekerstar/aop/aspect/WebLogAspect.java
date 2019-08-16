@@ -92,6 +92,12 @@ public class WebLogAspect {
     }
 
 
+    /**
+     * 获取切面注解的描述
+     * @param joinPoint
+     * @return
+     * @throws ClassNotFoundException
+     */
     public String getAspectLogDescription(JoinPoint joinPoint) throws ClassNotFoundException {
         String targetName = joinPoint.getTarget().getClass().getName();
         String methodName = joinPoint.getSignature().getName();
