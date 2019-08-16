@@ -12,6 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @author geekerstar
  * date: 2019-08-16 15:52
  * description:
+ *
+ * 1.异步日志；
+ * 2.支持 Java8 lambda 风格的懒加载日志；
+ * 3.过滤器；
+ * 4.插件；
+ * 5.并发性改进；
+ * 6.支持： SLF4J, Commons Logging, Log4j-1.x 以及 java.util.logging;
+ * 7.配置热加载;
+ * 8.自定义日志级别；
  */
 @SpringBootApplication
 @RestController
