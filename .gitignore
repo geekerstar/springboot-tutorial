@@ -1,14 +1,36 @@
-### Created by Geekerstar(https://github.com/geekerstar)
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
-## Compiled class Files
-*.class
-target/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-## Log Files
-*.log
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
 
-## Package Files
+### VS Code ###
+.vscode/
+/.mvn/
+/mvnw
+/mvnw.cmd
+
+## Package Files ###
 *.jar
 *.war
 *.nar
@@ -17,10 +39,5 @@ target/
 *.tar.gz
 *.rar
 
-## IDE Files
-*.iml
-.idea
-
-
-## System Files
+## System Files ###
 .DS_Store
