@@ -8,8 +8,9 @@
             color: red;
             font-size: 40px;
         }
+
         hr {
-            color:darkblue;
+            color: darkblue;
             font-size: 30px;
         }
     </style>
@@ -59,7 +60,7 @@
 <h2>1、字符串内建函数</h2>
 <ul>
     <#list "a|b|c|d"?split("|") as item>
-    <li>${item}</li>
+        <li>${item}</li>
     </#list>
 </ul>
 <br>
@@ -89,7 +90,7 @@
     <li>分块处理取长度：${listVar1?chunk(4)?size}</li>
     <li>长度：${listVar1?size}</li>
     <#list listVar1?chunk(4)?last as item>
-    <li>${item}</li>
+        <li>${item}</li>
     </#list>
     <li>取list第一个值：${listVar1?first}</li>
     <li>取list最后一个值：${listVar1?last}</li>
@@ -116,7 +117,7 @@
     <li>FreeMarker:无参数的macro</li>
     <div>
         <#macro test>
-        <font color="red" size="18px">无参数的macro</font>
+            <font color="red" size="18px">无参数的macro</font>
         </#macro>
         <@test/>
     </div>
@@ -124,30 +125,30 @@
     <li>Freemarker2:有参数的macro</li>
     <div>
         <#macro test param1 param2>
-        <font color="#ff7f50" size="18px">我是有参数的macro，param1=${param1},param2=${param2}</font>
-        <br>
-    </#macro>
-    <@test param1="java" param2="python"/>
+            <font color="#ff7f50" size="18px">我是有参数的macro，param1=${param1},param2=${param2}</font>
+            <br>
+        </#macro>
+        <@test param1="java" param2="python"/>
     </div>
 
     <li>Freemarker3:有参数的macro</li>
     <div>
         <#macro test param1 param2="javascript">
-        <font color="blue" size="18px">我是有默认参数的macro，param1=${param1},param2=${param2}</font>
-        <br>
+            <font color="blue" size="18px">我是有默认参数的macro，param1=${param1},param2=${param2}</font>
+            <br>
         </#macro>
-    <@test param1="java" param2="hello python"/>
+        <@test param1="java" param2="hello python"/>
     </div>
 
     <li>Freemarker4:有多个参数的macro</li>
     <div>
         <#macro test param1 param2="python" paramExt...>
-        <font color="blue" size="18px">我是有参数的macro,param1=${param1},param2=${param2}</font>
-        <br>
-        <font color="#ff7f50" size="18px">${paramExt['param3']}</font>
-        <font color="red" size="18px">${paramExt['param4']}</font>
-    </#macro>
-    <@test param1="java" param2="python" param3="node.js" param4="html"/>
+            <font color="blue" size="18px">我是有参数的macro,param1=${param1},param2=${param2}</font>
+            <br>
+            <font color="#ff7f50" size="18px">${paramExt['param3']}</font>
+            <font color="red" size="18px">${paramExt['param4']}</font>
+        </#macro>
+        <@test param1="java" param2="python" param3="node.js" param4="html"/>
     </div>
 </ul>
 <hr>
@@ -155,38 +156,37 @@
 <h2>2、nested</h2>
 <div>
     <ul>
-        <#macro test param1="java">
-        ${param1}
-        <br>
-        <#nested param1,"我的nested参数">
-        <br>
+        <#macro test param1="java111">
+            ${param1}
+            <br>
+            <#nested param1,"我的nested参数">
+            <br>
         </#macro>
         <li>调用</li>
         <div>
             <@test param1="java";loopVar1,loopVar2>
-            <font color="aqua" size="18px">hello ${loopVar1},${loopVar2}</font><br>
+                <font color="aqua" size="18px">hello ${loopVar1},${loopVar2}</font><br>
             </@test>
 
-        <@test param1="python";loopVar1>
-        hello ${loopVar1}
-        <br>
-        </@test>
+            <@test param1="python";loopVar1>
+                hello ${loopVar1}
+                <br>
+            </@test>
         </div>
     </ul>
 
-<hr>
+    <hr>
 
-<div>
-    <h2>3、函数</h2>
-    <ul>
-        <#function doAdd param1 param2>
-            <#return param1+param2>
-        </#function>
-    <li>调用</li>
-    <div>调用doAdd函数：${doAdd(100,100)}</div>
-    </ul>
-</div>
-
+    <div>
+        <h2>3、函数</h2>
+        <ul>
+            <#function doAdd param1 param2>
+                <#return param1+param2>
+            </#function>
+            <li>调用</li>
+            <div>调用doAdd函数：${doAdd(100,100)}</div>
+        </ul>
+    </div>
 
 
 </body>

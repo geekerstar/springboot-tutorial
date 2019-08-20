@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>test3</title>
     <style type="text/css">
-        body{
+        body {
             font-weight: bold;
         }
     </style>
@@ -31,39 +31,39 @@
     <br>
 
     <#if var == 99>
-    <font color="red">var=99</font>
+        <font color="red">var=99</font>
     <#else>
-    <font color="blue">var!=99</font>
+        <font color="blue">var!=99</font>
     </#if>
 
-<br>
+    <br>
 
     <#if var &gt; 99>
-    <font color="red">var大于99</font>
+        <font color="red">var大于99</font>
     <#elseif var==99>
-    <font color="blue">var等于99</font>
+        <font color="blue">var等于99</font>
     <#else>
-    <font color="green">var小于99</font>
+        <font color="green">var小于99</font>
     </#if>
 
-<br>
+    <br>
 
     <li>if多条件 || && ！</li>
     <#assign var ='python'>
     <#if var == 'python' || var == 'java'>
-    <font color ="red">python or java</font><br>
+        <font color="red">python or java</font><br>
     </#if>
 
     <#if var = 'python' && var?length ==6>
-    <font color="#9acd32">python length 6</font><br>
+        <font color="#9acd32">python length 6</font><br>
     </#if>
 
     <#if (var == 'python' && var?length ==6)|| (var == 'java')>
-    <font color="blue">Python length 6 或者 Java</font>
+        <font color="blue">Python length 6 或者 Java</font>
     </#if>
 
     <#if !((var == 'python' && var?length ==6) || (var =='java'))>
-    <font color="#7fffd4">python length 6或者Java</font><br>
+        <font color="#7fffd4">python length 6或者Java</font><br>
     </#if>
 
 </ul>
