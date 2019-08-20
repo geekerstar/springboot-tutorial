@@ -18,19 +18,19 @@ public class UserController {
 
     @RequestMapping("/getUser")
     @Cacheable("user-key")
-    public User getUser(){
-        User user = new User("geeker@qq.com","aa","12312312","aaa","122'");
+    public User getUser() {
+        User user = new User("geeker@qq.com", "aa", "12312312", "aaa", "122'");
         System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");
         return user;
     }
 
     @RequestMapping("/uuid")
-    public String uid(HttpSession session){
+    public String uid(HttpSession session) {
         UUID uuid = (UUID) session.getAttribute("uuid");
-        if (uuid == null){
+        if (uuid == null) {
             uuid = UUID.randomUUID();
         }
-        session.setAttribute("uuid",uuid);
+        session.setAttribute("uuid", uuid);
         return session.getId();
     }
 }

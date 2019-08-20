@@ -2,6 +2,7 @@ package com.geekerstar.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+
 /**
  * @author geekerstar
  * date: 2019-08-17 09:18

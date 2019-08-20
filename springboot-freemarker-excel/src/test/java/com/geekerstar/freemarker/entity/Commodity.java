@@ -10,12 +10,12 @@ import java.util.Date;
 @Data
 @Builder
 public class Commodity {
-    private String     name;
-    private Integer    num;
-    private int        num1;
+    private String name;
+    private Integer num;
+    private int num1;
     private BigDecimal price;
-    private Double     price2;
+    private Double price2;
     private Float price3;
-    private Date       createTime;
-    private Long       timestamp;
+    private Date createTime;
+    private Long timestamp;
 }

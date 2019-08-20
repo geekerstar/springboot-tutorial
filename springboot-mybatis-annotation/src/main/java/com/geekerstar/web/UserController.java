@@ -12,34 +12,34 @@ import java.util.List;
 @RestController
 public class UserController {
 
-	@Autowired
-	private UserMapper userMapper;
+    @Autowired
+    private UserMapper userMapper;
 
-	@RequestMapping("/getUsers")
-	public List<User> getUsers() {
-		List<User> users=userMapper.getAll();
-		return users;
-	}
+    @RequestMapping("/getUsers")
+    public List<User> getUsers() {
+        List<User> users = userMapper.getAll();
+        return users;
+    }
 
     @RequestMapping("/getUser")
     public User getUser(Long id) {
-    	User user=userMapper.getOne(id);
+        User user = userMapper.getOne(id);
         return user;
     }
 
     @RequestMapping("/add")
     public void save(User user) {
-    	userMapper.insert(user);
+        userMapper.insert(user);
     }
 
-    @RequestMapping(value="update")
+    @RequestMapping(value = "update")
     public void update(User user) {
-    	userMapper.update(user);
+        userMapper.update(user);
     }
 
-    @RequestMapping(value="/delete/{id}")
+    @RequestMapping(value = "/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
-    	userMapper.delete(id);
+        userMapper.delete(id);
     }
 
 

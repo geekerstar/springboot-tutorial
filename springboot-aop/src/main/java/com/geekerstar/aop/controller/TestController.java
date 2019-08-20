@@ -24,7 +24,7 @@ public class TestController {
      */
     @PostMapping("/user/login")
     @Weblog(description = "请求了用户登录接口")
-    public User userLogin(@RequestBody User user){
+    public User userLogin(@RequestBody User user) {
         logger.info("user login ...");
         return user;
     }
@@ -37,19 +37,20 @@ public class TestController {
      */
     @GetMapping("/user/{id}")
     @Weblog(description = "请求了用户登录接口")
-    public String findUserInfo(@PathVariable("id") String userId){
+    public String findUserInfo(@PathVariable("id") String userId) {
         logger.info("find user info ...");
         return "success";
     }
 
     @GetMapping("/test11")
-    public String test(){
+    public String test() {
         logger.info("testget...");
         return "success";
     }
 
     /**
      * 单文件上传接口测试
+     *
      * @return
      */
     @PostMapping("/file/upload")
@@ -60,6 +61,7 @@ public class TestController {
 
     /**
      * 多文件上传接口测试
+     *
      * @return
      */
     @PostMapping("/multiFile/upload")

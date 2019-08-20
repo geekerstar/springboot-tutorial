@@ -13,7 +13,7 @@ import java.util.List;
  * date: 2019-08-20 15:30
  * description:
  */
-public interface UserDetailRepository extends JpaSpecificationExecutor<UserDetail>, JpaRepository<UserDetail,Long> {
+public interface UserDetailRepository extends JpaSpecificationExecutor<UserDetail>, JpaRepository<UserDetail, Long> {
 
     UserDetail findByHobby(String hobby);
 

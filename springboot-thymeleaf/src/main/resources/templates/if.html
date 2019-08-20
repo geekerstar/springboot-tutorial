@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"></meta>
     <title>Example If/Unless </title>
 </head>
 <body>
-<div >
+<div>
     <h1>If/Unless</h1>
-    <a th:if="${flag == 'yes'}"  th:href="@{https://www.jikewenku.com/}"> 极客文库 </a>
+    <a th:if="${flag == 'yes'}" th:href="@{https://www.jikewenku.com/}"> 极客文库 </a>
     <br/>
-    <a th:unless="${flag != 'no'}" th:href="@{https://www.geekerstar.com}" >geekerstar</a>
+    <a th:unless="${flag != 'no'}" th:href="@{https://www.geekerstar.com}">geekerstar</a>
 </div>
 </body>
 </html>

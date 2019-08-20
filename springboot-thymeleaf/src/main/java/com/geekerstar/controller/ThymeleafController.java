@@ -17,14 +17,14 @@ import java.util.List;
 public class ThymeleafController {
 
     @RequestMapping("/")
-    public String index(ModelMap map){
-        map.addAttribute("message","https://www.geekerstar.com");
+    public String index(ModelMap map) {
+        map.addAttribute("message", "https://www.geekerstar.com");
         return "hello";
     }
 
     @RequestMapping("/string")
-    public String string(ModelMap map){
-        map.addAttribute("userName","geekerstar");
+    public String string(ModelMap map) {
+        map.addAttribute("userName", "geekerstar");
         return "string";
     }
 
@@ -62,14 +62,14 @@ public class ThymeleafController {
         return "switch";
     }
 
-    private List<User> getUserList(){
-        List<User> list=new ArrayList<User>();
-        User user1=new User("大牛",12,"123456");
-        User user2=new User("小牛",6,"123563");
-        User user3=new User("Geeker",66,"666666");
+    private List<User> getUserList() {
+        List<User> list = new ArrayList<User>();
+        User user1 = new User("大牛", 12, "123456");
+        User user2 = new User("小牛", 6, "123563");
+        User user3 = new User("Geeker", 66, "666666");
         list.add(user1);
         list.add(user2);
         list.add(user3);
-        return  list;
+        return list;
     }
 }

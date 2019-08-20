@@ -15,7 +15,7 @@ public class UserDetail {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(nullable = false,unique = true)
+    @Column(nullable = false, unique = true)
     private Long userId;
     private Integer age;
     private String realName;

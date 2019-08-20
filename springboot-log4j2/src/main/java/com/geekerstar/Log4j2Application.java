@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author geekerstar
  * date: 2019-08-16 15:52
  * description:
- *
+ * <p>
  * 1.异步日志；
  * 2.支持 Java8 lambda 风格的懒加载日志；
  * 3.过滤器；
@@ -26,13 +26,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Log4j2Application {
     public static void main(String[] args) {
-        SpringApplication.run(Log4j2Application.class,args);
+        SpringApplication.run(Log4j2Application.class, args);
     }
 
     private static final Logger logger = LogManager.getLogger(Log4j2Application.class);
 
     @GetMapping("/test")
-    public String test(){
+    public String test() {
         logger.debug("debug级别的日志……");
         logger.info("info级别的日志……");
         logger.warn("warn级别的日志……");

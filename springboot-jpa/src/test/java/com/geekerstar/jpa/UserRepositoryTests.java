@@ -28,17 +28,17 @@ public class UserRepositoryTests {
     private UserRepository userRepository;
 
     @Test
-    public void testSave(){
+    public void testSave() {
         Date date = new Date();
-        DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG,DateFormat.LONG);
+        DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
         String formatDate = dateFormat.format(date);
 
-        userRepository.save(new User("aa","aa123456","aa@qq.com","aa",formatDate));
-        userRepository.save(new User("bb","bb123456","bb@qq.com","bb",formatDate));
-        userRepository.save(new User("cc","cc123456","cc@qq.com","cc",formatDate));
+        userRepository.save(new User("aa", "aa123456", "aa@qq.com", "aa", formatDate));
+        userRepository.save(new User("bb", "bb123456", "bb@qq.com", "bb", formatDate));
+        userRepository.save(new User("cc", "cc123456", "cc@qq.com", "cc", formatDate));
 
-        Assert.assertEquals(3,userRepository.findAll().size());
-        Assert.assertEquals("bb",userRepository.findByUserNameOrEmail("bb","bb@qq.com").getNickName());
+        Assert.assertEquals(3, userRepository.findAll().size());
+        Assert.assertEquals("bb", userRepository.findByUserNameOrEmail("bb", "bb@qq.com").getNickName());
     }
 
     @Test
@@ -46,7 +46,7 @@ public class UserRepositoryTests {
         Date date = new Date();
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
         String formattedDate = dateFormat.format(date);
-        User user=new User("ff", "ff123456","ff@126.com", "ff",  formattedDate);
+        User user = new User("ff", "ff123456", "ff@126.com", "ff", formattedDate);
         userRepository.findAll();
         userRepository.findById(3L);
         userRepository.save(user);
@@ -58,15 +58,15 @@ public class UserRepositoryTests {
 
     @Test
     public void testCustomSql() {
-        userRepository.modifyById("neo",3L);
+        userRepository.modifyById("neo", 3L);
         userRepository.deleteById(3L);
         userRepository.findByEmail("ff@126.com");
     }
 
 
     @Test
-    public void testPageQuery()  {
-        int page=1,size=2;
+    public void testPageQuery() {
+        int page = 1, size = 2;
         Sort sort = new Sort(Sort.Direction.DESC, "id");
         Pageable pageable = PageRequest.of(page, size, sort);
         userRepository.findAll(pageable);

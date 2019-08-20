@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
  */
 @Aspect
 @Component
-@Profile({"dev","test"})
+@Profile({"dev", "test"})
 public class WebLogAspect {
     private final static Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
     /**
@@ -33,10 +33,12 @@ public class WebLogAspect {
      * 以自定义 @WebLog 注解为切点
      */
     @Pointcut("@annotation(com.geekerstar.aop.aspect.Weblog)")
-    public void webLog(){}
+    public void webLog() {
+    }
 
     /**
      * 在切点之前织入
+     *
      * @param joinPoint
      */
     @Before("webLog()")
@@ -66,34 +68,37 @@ public class WebLogAspect {
 
     /**
      * 在切点之后织入
+     *
      * @throws Throwable
      */
     @After("webLog()")
-    public void doAfter() throws Throwable{
+    public void doAfter() throws Throwable {
         // 接口结束后换行，方便分割查看
         logger.info("=========================================== End ===========================================" + LINE_SEPARATOR);
     }
 
     /**
      * 环绕
+     *
      * @param proceedingJoinPoint
      * @return
      * @throws Throwable
      */
     @Around("webLog()")
-    public Object doAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
+    public Object doAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
         Object result = proceedingJoinPoint.proceed();
         // 打印出参
-        logger.info("Response Args  : {} ",new Gson().toJson(result));
+        logger.info("Response Args  : {} ", new Gson().toJson(result));
         // 执行耗时
-        logger.info("Time-Consuming : {} ms",System.currentTimeMillis() - startTime);
+        logger.info("Time-Consuming : {} ms", System.currentTimeMillis() - startTime);
         return result;
     }
 
 
     /**
      * 获取切面注解的描述
+     *
      * @param joinPoint
      * @return
      * @throws ClassNotFoundException
@@ -105,10 +110,10 @@ public class WebLogAspect {
         Class targetClass = Class.forName(targetName);
         Method[] methods = targetClass.getMethods();
         StringBuilder description = new StringBuilder("");
-        for (Method method : methods){
-            if (method.getName().equals(methodName)){
+        for (Method method : methods) {
+            if (method.getName().equals(methodName)) {
                 Class[] clazzs = method.getParameterTypes();
-                if (clazzs.length == arguments.length){
+                if (clazzs.length == arguments.length) {
                     description.append(method.getAnnotation(Weblog.class).description());
                 }
             }

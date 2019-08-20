@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class TimeController {
 
     @PostMapping("/time")
-    public String createTime(@RequestBody User user){
+    public String createTime(@RequestBody User user) {
         System.out.println(user.getCreateTime().toString());
         return "success";
     }
 
     @PostMapping("/user")
-    public User createUser(@RequestBody User user){
+    public User createUser(@RequestBody User user) {
         System.out.println(user.getCreateTime().toString());
         // 将User以JSON格式返回
         return user;

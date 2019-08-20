@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AOPController {
     @GetMapping("/test")
-    public String test(String name){
+    public String test(String name) {
         return "hello AOP!";
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody UserForm userForm){
+    public String login(@RequestBody UserForm userForm) {
         return "hello AOP2!";
     }
 }

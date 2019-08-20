@@ -13,6 +13,7 @@ import java.lang.annotation.*;
 public @interface Weblog {
     /**
      * 日志描述信息
+     *
      * @return
      */
     String description() default "";

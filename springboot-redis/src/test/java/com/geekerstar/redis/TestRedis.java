@@ -28,20 +28,20 @@ public class TestRedis {
     private RedisTemplate redisTemplate;
 
     @Test
-    public void test(){
-        stringRedisTemplate.opsForValue().set("aaa","bbb");
-        Assert.assertEquals("bbb",stringRedisTemplate.opsForValue().get("aaa"));
+    public void test() {
+        stringRedisTemplate.opsForValue().set("aaa", "bbb");
+        Assert.assertEquals("bbb", stringRedisTemplate.opsForValue().get("aaa"));
     }
 
     @Test
     public void testObj() throws InterruptedException {
-        User user = new User("22@qq.com","aaa","ddd","sds","22");
-        ValueOperations<String,User> operations = redisTemplate.opsForValue();
-        operations.set("com.geekerstar",user);
-        operations.set("com.geekerstar.redis",user,1, TimeUnit.SECONDS);
+        User user = new User("22@qq.com", "aaa", "ddd", "sds", "22");
+        ValueOperations<String, User> operations = redisTemplate.opsForValue();
+        operations.set("com.geekerstar", user);
+        operations.set("com.geekerstar.redis", user, 1, TimeUnit.SECONDS);
         Thread.sleep(1000);
         boolean exists = redisTemplate.hasKey("com.geekerstar.redis");
-        if (exists){
+        if (exists) {
             System.out.println("true");
         } else {
             System.out.println("false");

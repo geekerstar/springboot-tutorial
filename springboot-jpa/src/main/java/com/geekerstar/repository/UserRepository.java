@@ -14,15 +14,15 @@ import org.springframework.transaction.annotation.Transactional;
  * date: 2019-08-20 15:19
  * description:
  */
-public interface UserRepository extends JpaRepository<User,Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
     User findByUserName(String userName);
 
-    User findByUserNameOrEmail(String username,String email);
+    User findByUserNameOrEmail(String username, String email);
 
     @Transactional(timeout = 10)
     @Modifying
     @Query("update User set userName= ?1 where id = ?2")
-    int modifyById(String userName,Long id);
+    int modifyById(String userName, Long id);
 
     @Transactional
     @Modifying
@@ -35,7 +35,7 @@ public interface UserRepository extends JpaRepository<User,Long> {
     @Query("select u from User u")
     Page<User> findAll(Pageable pageable);
 
-    Page<User> findByNickName(String nickName,Pageable pageable);
+    Page<User> findByNickName(String nickName, Pageable pageable);
 
-    Slice<User> findByNickNameAndEmail(String nickName,String email,Pageable pageable);
+    Slice<User> findByNickNameAndEmail(String nickName, String email, Pageable pageable);
 }

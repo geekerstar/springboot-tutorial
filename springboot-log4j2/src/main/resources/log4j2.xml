@@ -4,26 +4,29 @@
 <!--monitorInterval：Log4j2能够自动检测修改的配置,并加载，此参数设置间隔秒数-->
 <Configuration status="WARN" monitorInterval="30">
     <!--<Properties>-->
-        <!--<Property name="PID">????</Property>-->
-        <!--<Property name="APP_NAME">test</Property>-->
-        <!--<Property name="LOG_FILE">/app/logs/${APP_NAME}/${APP_NAME}.{%d{yyyy-MM-dd}}</Property>-->
-        <!--&lt;!&ndash;<Property scope="context" name="appName" value="qms" />&ndash;&gt;-->
-        <!--&lt;!&ndash;<Property name="LOG_FILE" value="/app/logs/${appName}/${appName}.%d{yyyy-MM-dd}"/>&ndash;&gt;-->
-        <!--&lt;!&ndash; 定义日志的输出格式 &ndash;&gt;-->
-        <!--<Property name="LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{%5p} %clr{${sys:PID}}{magenta}-->
-            <!--%clr{-&#45;&#45;}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n%xwEx-->
-        <!--</Property>-->
+    <!--<Property name="PID">????</Property>-->
+    <!--<Property name="APP_NAME">test</Property>-->
+    <!--<Property name="LOG_FILE">/app/logs/${APP_NAME}/${APP_NAME}.{%d{yyyy-MM-dd}}</Property>-->
+    <!--&lt;!&ndash;<Property scope="context" name="appName" value="qms" />&ndash;&gt;-->
+    <!--&lt;!&ndash;<Property name="LOG_FILE" value="/app/logs/${appName}/${appName}.%d{yyyy-MM-dd}"/>&ndash;&gt;-->
+    <!--&lt;!&ndash; 定义日志的输出格式 &ndash;&gt;-->
+    <!--<Property name="LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{%5p} %clr{${sys:PID}}{magenta}-->
+    <!--%clr{-&#45;&#45;}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n%xwEx-->
+    <!--</Property>-->
     <!--</Properties>-->
 
     <Properties>
         <Property name="PID">PID</Property>
         <Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
         <Property name="LOG_LEVEL_PATTERN">%5p</Property>
-        <Property name="LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{${LOG_LEVEL_PATTERN}} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}</Property>
+        <Property name="LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{${LOG_LEVEL_PATTERN}}
+            %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint}
+            %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}
+        </Property>
     </Properties>
 
     <Appenders>
-        <param name="Encoding" value="UTF-8" />
+        <param name="Encoding" value="UTF-8"/>
         <Console name="Console" target="SYSTEM_OUT" follow="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>

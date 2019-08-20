@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * date: 2019-08-20 15:33
  * description:
  */
-public interface AddressRepository extends JpaRepository<Address,Long> {
+public interface AddressRepository extends JpaRepository<Address, Long> {
 }

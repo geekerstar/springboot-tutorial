@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class InterceptorController {
 
     @GetMapping("/admin/test")
-    public String test(){
+    public String test() {
         System.out.println("test");
         return "success";
     }

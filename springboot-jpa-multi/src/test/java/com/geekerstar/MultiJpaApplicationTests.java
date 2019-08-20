@@ -9,9 +9,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class MultiJpaApplicationTests {
 
-	@Test
-	public void contextLoads() {
-		System.out.println("Hello MultiJpa!");
-	}
+    @Test
+    public void contextLoads() {
+        System.out.println("Hello MultiJpa!");
+    }
 
 }
