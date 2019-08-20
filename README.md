@@ -16,3 +16,9 @@
 | springboot-thymeleaf | SpringBoot集成thymeleaf |
 | springboot-jpa | SpringBoot集成Spring Data JPA |
 | springboot-multi-jpa | 多数据源JPA应用 |
+| springboot-mybatis-annotation | SpringBoot集成Mybatisz(注解） |
+| springboot-mybatis-annotation-multi | SpringBoot集成Mybatis多数据源（注解） |
+|  |  |
+|  |  |
+|  |  |
+|  |  |

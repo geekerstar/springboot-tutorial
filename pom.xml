@@ -23,6 +23,7 @@
         <module>springboot-thymeleaf</module>
         <module>springboot-jpa</module>
         <module>springboot-multi-jpa</module>
+        <module>springboot-mybatis-annotation</module>
     </modules>
 
 
