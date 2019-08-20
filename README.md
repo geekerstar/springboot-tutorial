@@ -15,4 +15,4 @@
 | springboot-redis | SpringBoot集成Redis |
 | springboot-thymeleaf | SpringBoot集成thymeleaf |
 | springboot-jpa | SpringBoot集成Spring Data JPA |
-|  |  |
+| springboot-multi-jpa | 多数据源JPA应用 |

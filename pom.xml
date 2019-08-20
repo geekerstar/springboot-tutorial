@@ -22,6 +22,7 @@
         <module>springboot-redis</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-jpa</module>
+        <module>springboot-multi-jpa</module>
     </modules>
 
 
