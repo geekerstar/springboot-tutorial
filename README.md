@@ -12,7 +12,7 @@
 | springboot-mail | SpringBoot集成邮箱发送功能 |
 | springboot-webflux | SpringBoot webFlux研究 |
 | springboot-web | SpringBoot Web开发相关 |
-|  |  |
+| springboot-redis | SpringBoot集成Redis |
 |  |  |
 |  |  |
 |  |  |

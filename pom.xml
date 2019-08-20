@@ -19,6 +19,7 @@
         <module>springboot-freemarker-excel</module>
         <module>springboot-freemarker-sample</module>
         <module>springboot-web</module>
+        <module>springboot-redis</module>
     </modules>
 
 
