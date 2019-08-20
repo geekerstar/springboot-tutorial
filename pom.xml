@@ -26,6 +26,7 @@
         <module>springboot-mybatis-annotation</module>
         <module>springboot-mybatis-annotation-multi</module>
         <module>springboot-mybatis-xml</module>
+        <module>springboot-mybatis-xml-multi</module>
     </modules>
 
 
