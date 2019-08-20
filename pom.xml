@@ -22,9 +22,10 @@
         <module>springboot-redis</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-jpa</module>
-        <module>springboot-multi-jpa</module>
+        <module>springboot-jpa-multi</module>
         <module>springboot-mybatis-annotation</module>
         <module>springboot-mybatis-annotation-multi</module>
+        <module>springboot-mybatis-xml</module>
     </modules>
 
 
