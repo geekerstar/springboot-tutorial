@@ -13,6 +13,6 @@
 | springboot-webflux | SpringBoot webFlux研究 |
 | springboot-web | SpringBoot Web开发相关 |
 | springboot-redis | SpringBoot集成Redis |
-|  |  |
-|  |  |
+| springboot-thymeleaf | SpringBoot集成thymeleaf |
+| springboot-jpa | SpringBoot集成Spring Data JPA |
 |  |  |
