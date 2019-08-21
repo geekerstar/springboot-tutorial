@@ -31,6 +31,7 @@
         <module>springboot-package</module>
         <module>springboot-package-war</module>
         <module>springboot-upload</module>
+        <module>springboot-banner</module>
     </modules>
 
 
