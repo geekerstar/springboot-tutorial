@@ -32,6 +32,7 @@
         <module>springboot-package-war</module>
         <module>springboot-upload</module>
         <module>springboot-banner</module>
+        <module>springboot-command-line-runner</module>
     </modules>
 
 
