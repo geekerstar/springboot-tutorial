@@ -20,5 +20,5 @@
 | springboot-mybatis-annotation-multi | SpringBoot集成Mybatis多数据源（注解） |
 | springboot-mybatis-xml | SpringBoot集成Mybatis(xml） |
 | springboot-mybatis-xml-multi | SpringBoot集成Mybatis多数据源(xml） |
-|  |  |
+| springboot-schedule | SpringBoot定时任务 |
 |  |  |
