@@ -1,0 +1,8 @@
+2019-08-21 10:05:52.070  INFO 13919 --- [main] c.geekerstar.HelloWorldControllerTests   : Starting HelloWorldControllerTests on MacBook-Pro.local with PID 13919 (started by geekerstar in /work/ideaprojects/springboot-tutorial/springboot-package)
+2019-08-21 10:05:52.072  INFO 13919 --- [main] c.geekerstar.HelloWorldControllerTests   : No active profile set, falling back to default profiles: default
+2019-08-21 10:05:53.216  INFO 13919 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-21 10:05:53.509  INFO 13919 --- [main] c.geekerstar.HelloWorldControllerTests   : Started HelloWorldControllerTests in 16.653 seconds (JVM running for 17.368)
+2019-08-21 10:05:53.771  INFO 13919 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-08-21 10:05:53.771  INFO 13919 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-08-21 10:05:53.771  INFO 13919 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2019-08-21 10:05:53.883  INFO 13919 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

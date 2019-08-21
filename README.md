@@ -21,4 +21,7 @@
 | springboot-mybatis-xml | SpringBoot集成Mybatis(xml） |
 | springboot-mybatis-xml-multi | SpringBoot集成Mybatis多数据源(xml） |
 | springboot-schedule | SpringBoot定时任务 |
+| springboot-package | SpringBoot打包部署（jar) |
+| springboot-package-war | SpringBoot打包部署（war) |
+|  |  |
 |  |  |
