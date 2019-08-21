@@ -11,7 +11,7 @@ public interface MailService {
      * @param content
      * @return
      */
-    boolean send(String to, String subject, String content);
+    boolean sendSimpleEmail(String to, String subject, String content);
 
     /**
      * 发送 html 的邮件
@@ -21,7 +21,7 @@ public interface MailService {
      * @param html
      * @return
      */
-    boolean sendWithHtml(String to, String subject, String html);
+    boolean sendHtmlEmail(String to, String subject, String html);
 
     /**
      * 发送带有图片的 html 的邮件
@@ -33,7 +33,7 @@ public interface MailService {
      * @param filePaths
      * @return
      */
-    boolean sendWithImageHtml(String to, String subject, String html, String[] cids, String[] filePaths);
+    boolean sendHtmlImageEmail(String to, String subject, String html, String[] cids, String[] filePaths);
 
 
     /**
@@ -45,6 +45,6 @@ public interface MailService {
      * @param filePaths
      * @return
      */
-    boolean sendWithWithEnclosure(String to, String subject, String content, String[] filePaths);
+    boolean sendResourceEmail(String to, String subject, String content, String[] filePaths);
 
 }

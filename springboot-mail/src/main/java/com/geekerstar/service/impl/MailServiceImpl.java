@@ -39,7 +39,7 @@ public class MailServiceImpl implements MailService {
      * @return
      */
     @Override
-    public boolean send(String to, String subject, String content) {
+    public boolean sendSimpleEmail(String to, String subject, String content) {
         logger.info("## Ready to send mail ...");
 
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
@@ -73,12 +73,13 @@ public class MailServiceImpl implements MailService {
      * @return
      */
     @Override
-    public boolean sendWithHtml(String to, String subject, String html) {
+    public boolean sendHtmlEmail(String to, String subject, String html) {
         logger.info("## Ready to send mail ...");
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 
         MimeMessageHelper mimeMessageHelper = null;
         try {
+            // true表示要创建一个multipart message
             mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
             // 邮件发送来源
             mimeMessageHelper.setFrom(mailProperties.getUsername());
@@ -111,7 +112,7 @@ public class MailServiceImpl implements MailService {
      * @return
      */
     @Override
-    public boolean sendWithImageHtml(String to, String subject, String html, String[] cids, String[] filePaths) {
+    public boolean sendHtmlImageEmail(String to, String subject, String html, String[] cids, String[] filePaths) {
         logger.info("## Ready to send mail ...");
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 
@@ -154,7 +155,7 @@ public class MailServiceImpl implements MailService {
      * @return
      */
     @Override
-    public boolean sendWithWithEnclosure(String to, String subject, String content, String[] filePaths) {
+    public boolean sendResourceEmail(String to, String subject, String content, String[] filePaths) {
         logger.info("## Ready to send mail ...");
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 

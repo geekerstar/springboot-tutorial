@@ -23,7 +23,7 @@ public class SpringBootMailApplicationTests {
         String to = "17602684842@163.com";
         String title = "标题: 简单文本邮件发送测试";
         String content = "简单文本 ...";
-        Assert.assertTrue(mailService.send(to, title, content));
+        Assert.assertTrue(mailService.sendSimpleEmail(to, title, content));
     }
 
     /**
@@ -36,7 +36,7 @@ public class SpringBootMailApplicationTests {
 
         String htmlContent = "<html><body><h1>欢迎关注极客文库</h1></body></html>";
 
-        Assert.assertTrue(mailService.sendWithHtml(to, title, htmlContent));
+        Assert.assertTrue(mailService.sendHtmlEmail(to, title, htmlContent));
     }
 
     /**
@@ -64,7 +64,7 @@ public class SpringBootMailApplicationTests {
                 "/Users/geekerstar/Downloads/avatar.jpg"
         };
 
-        Assert.assertTrue(mailService.sendWithImageHtml(to, title, htmlContent, cids, filePaths));
+        Assert.assertTrue(mailService.sendHtmlImageEmail(to, title, htmlContent, cids, filePaths));
     }
 
     /**
@@ -82,7 +82,7 @@ public class SpringBootMailApplicationTests {
                 "/Users/geekerstar/Downloads/avatar.jpg"
         };
 
-        Assert.assertTrue(mailService.sendWithWithEnclosure(to, title, content, filePaths));
+        Assert.assertTrue(mailService.sendResourceEmail(to, title, content, filePaths));
     }
 
 
