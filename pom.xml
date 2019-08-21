@@ -29,6 +29,7 @@
         <module>springboot-mybatis-xml-multi</module>
         <module>springboot-schedule</module>
         <module>springboot-package</module>
+        <module>springboot-package-war</module>
     </modules>
 
 
