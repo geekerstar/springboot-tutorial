@@ -33,6 +33,7 @@
         <module>springboot-upload</module>
         <module>springboot-banner</module>
         <module>springboot-command-line-runner</module>
+        <module>springboot-swagger</module>
     </modules>
 
 

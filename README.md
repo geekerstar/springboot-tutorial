@@ -26,7 +26,7 @@
 | springboot-upload | SpringBoot文件上传 |
 | springboot-banner | SpringBoot动态banner |
 | springboot-command-line-runner | SpringBoot项目启动时初始化资源 |
-|  |  |
+| springboot-swagger | SpringBoot集成Swagger |
 |  |  |
 |  |  |
 |  |  |
