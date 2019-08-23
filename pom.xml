@@ -34,6 +34,7 @@
         <module>springboot-banner</module>
         <module>springboot-command-line-runner</module>
         <module>springboot-swagger</module>
+        <module>springboot-shiro</module>
     </modules>
 
 
