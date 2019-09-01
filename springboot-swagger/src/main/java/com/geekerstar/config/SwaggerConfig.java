@@ -32,11 +32,15 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
+                // 页面标题
                 .title("我是标题")
+                // 描述
                 .description("我是描述")
                 // 服务条款网址
                 .termsOfServiceUrl("https://www.geekerstar.com")
+                // 版本号
                 .version("1.0")
+                // 联系方式
                 .contact(new Contact("Geekerstar","https://www.geekerstar.com","247507792@qq.com"))
                 .build();
     }
