@@ -23,6 +23,7 @@
 | springboot-redis | SpringBoot集成Redis |
 | springboot-schedule | SpringBoot定时任务 |
 | springboot-shiro | Springboot集成Shiro |
+| springboot-source | SpringBoot源码研究 |
 | springboot-swagger | SpringBoot集成Swagger |
 | springboot-thymeleaf | SpringBoot集成thymeleaf |
 | springboot-upload | SpringBoot文件上传 |
