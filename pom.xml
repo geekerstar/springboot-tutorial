@@ -35,6 +35,8 @@
         <module>springboot-command-line-runner</module>
         <module>springboot-swagger</module>
         <module>springboot-shiro</module>
+        <module>springboot-source</module>
+        <module>springboot-elasticjob</module>
     </modules>
 
 

@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.example.autoconfig.ZookeeperAutoConfig,\
+com.example.autoconfig.SimpleJobAutoConfig,\
+  com.example.autoconfig.DataflowJobAutoConfig

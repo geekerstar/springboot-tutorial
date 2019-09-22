@@ -6,6 +6,7 @@
 | springboot-aop  | SpringBoot AOP相关教程 |
 | springboot-banner | SpringBoot动态banner |
 | springboot-command-line-runner | SpringBoot项目启动时初始化资源 |
+| springboot-elasticjob | SpringBoot整合ElasticJob |
 | springboot-freemarker-excel | SpringBoot集成Freemarker处理Excel案例 |
 | springboot-freemarker-sample | Springboot基成Freemarker基础案例 |
 | springboot-helloworld  | SpringBoot基础教程 |

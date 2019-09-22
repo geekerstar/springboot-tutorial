@@ -1,0 +1,4 @@
+# springboot-elasticjob
+Springboot整合Elastic-Job
+
+初次运行，请修改application.properties文件中的zookeeper地址，以及数据库地址
