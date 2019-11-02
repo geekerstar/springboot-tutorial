@@ -30,7 +30,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.geekerstar.diveinspringboot.DiveInSpringBootApplication</mainClass>
+                    <mainClass>com.geekerstar.diveinspringboot.AutoconfigureApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

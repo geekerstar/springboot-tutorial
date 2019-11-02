@@ -11,11 +11,11 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @since 2018/5/17
  */
 @SpringBootApplication
-public class SpringApplicationContextBootstrap {
+public class SpringApplication {
 
     public static void main(String[] args) {
 
-        ConfigurableApplicationContext context = new SpringApplicationBuilder(SpringApplicationContextBootstrap.class)
+        ConfigurableApplicationContext context = new SpringApplicationBuilder(SpringApplication.class)
 //                .web(WebApplicationType.NONE)
                 .run(args);
 

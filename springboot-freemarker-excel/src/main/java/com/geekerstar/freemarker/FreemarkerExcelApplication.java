@@ -5,12 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author geekerstar
- * date: 2019-08-19 10:39
+ * date: 2019-08-19 09:43
  * description:
  */
 @SpringBootApplication
-public class FreemarkerApplication {
+public class FreemarkerExcelApplication {
     public static void main(String[] args) {
-        SpringApplication.run(FreemarkerApplication.class, args);
+        SpringApplication.run(FreemarkerExcelApplication.class, args);
     }
 }

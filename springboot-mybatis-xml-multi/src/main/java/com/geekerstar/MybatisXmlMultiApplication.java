@@ -1,12 +1,12 @@
-package com.geekerstar.diveinspringboot;
+package com.geekerstar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DiveInSpringBootApplication {
+public class MybatisXmlMultiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DiveInSpringBootApplication.class, args);
+		SpringApplication.run(MybatisXmlMultiApplication.class, args);
 	}
 }

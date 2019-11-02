@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * description:
  */
 @SpringBootApplication
-public class RunnerApplication {
+public class CommandLineRunnerApplication {
     public static void main(String[] args) {
         System.out.println("服务开始……");
-        SpringApplication.run(RunnerApplication.class,args);
+        SpringApplication.run(CommandLineRunnerApplication.class,args);
         System.out.println("服务结束……");
 
     }

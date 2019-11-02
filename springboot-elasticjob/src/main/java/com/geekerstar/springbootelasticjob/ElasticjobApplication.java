@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan("com.geekerstar.springbootelasticjob.dao")
 
-public class SpringbootElasticjobApplication {
+public class ElasticjobApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootElasticjobApplication.class, args);
+        SpringApplication.run(ElasticjobApplication.class, args);
     }
 
 }

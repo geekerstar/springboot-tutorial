@@ -5,11 +5,11 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
 //@ServletComponentScan(basePackages = "com.imooc.diveinspringboot.web.servlet")
-public class DiveInSpringBootApplication {
+public class OverviewApplication {
 
     public static void main(String[] args) {
 
-        new SpringApplicationBuilder(DiveInSpringBootApplication.class)
+        new SpringApplicationBuilder(OverviewApplication.class)
 //				.web(WebApplicationType.NONE)
                 .run(args);
 //		SpringApplication.run(DiveInSpringBootApplication.class, args);

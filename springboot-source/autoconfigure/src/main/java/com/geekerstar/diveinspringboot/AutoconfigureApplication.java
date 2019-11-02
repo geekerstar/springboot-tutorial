@@ -1,12 +1,12 @@
-package com.geekerstar;
+package com.geekerstar.diveinspringboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WarApplication {
+public class AutoconfigureApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WarApplication.class, args);
+		SpringApplication.run(AutoconfigureApplication.class, args);
 	}
 }
