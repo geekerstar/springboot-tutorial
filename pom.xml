@@ -37,6 +37,7 @@
         <module>springboot-shiro</module>
         <module>springboot-source</module>
         <module>springboot-elasticjob</module>
+        <module>springboot-mybatis-generator</module>
     </modules>
 
 

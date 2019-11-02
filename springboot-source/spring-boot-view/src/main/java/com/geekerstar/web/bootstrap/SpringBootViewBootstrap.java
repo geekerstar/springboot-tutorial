@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author 小马哥
  * @since 2018/5/24
  */
-@SpringBootApplication(scanBasePackages = "com.imooc.web")
+@SpringBootApplication(scanBasePackages = "com.geekerstar.web")
 public class SpringBootViewBootstrap {
 
     public static void main(String[] args) {

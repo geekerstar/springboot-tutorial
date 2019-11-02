@@ -19,7 +19,7 @@
         <module>spring-servlet</module>
         <module>spring-webmvc</module>
         <module>springboot-rest</module>
-        <module>springboot-view</module>
+        <module>spring-boot-view</module>
         <module>spring-boot-webmvc</module>
     </modules>
 
