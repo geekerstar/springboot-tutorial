@@ -6,6 +6,7 @@
 | springboot-aop  | SpringBoot AOP相关教程 |
 | springboot-banner | SpringBoot动态banner |
 | springboot-command-line-runner | SpringBoot项目启动时初始化资源 |
+| springboot-druid | Springboot集成Druid |
 | springboot-elasticjob | SpringBoot整合ElasticJob |
 | springboot-tutorial | SpringBoot集成Flowable工作流 |
 | springboot-freemarker-excel | SpringBoot集成Freemarker处理Excel案例 |
