@@ -1,0 +1,20 @@
+###################  项目启动端口  ###################
+server:
+  port: 8080
+
+###################  spring配置  ###################
+spring:
+  profiles:
+    active: dev
+  ##########################################################
+  ###################  开发环境的profile  ###################
+  ##########################################################
+  datasource:
+    username: hantu
+    password: Hantu@1234
+    url: jdbc:mysql://XXXXXXXXXXX:3306/XXX?autoReconnect=true&useUnicode\=true&characterEncoding\=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+flowable:
+  database-schema-update: true

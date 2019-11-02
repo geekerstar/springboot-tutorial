@@ -7,6 +7,7 @@
 | springboot-banner | SpringBoot动态banner |
 | springboot-command-line-runner | SpringBoot项目启动时初始化资源 |
 | springboot-elasticjob | SpringBoot整合ElasticJob |
+| springboot-tutorial | SpringBoot集成Flowable工作流 |
 | springboot-freemarker-excel | SpringBoot集成Freemarker处理Excel案例 |
 | springboot-freemarker-sample | Springboot基成Freemarker基础案例 |
 | springboot-helloworld  | SpringBoot基础教程 |
@@ -30,5 +31,4 @@
 | springboot-upload | SpringBoot文件上传 |
 | springboot-web | SpringBoot Web开发相关 |
 | springboot-webflux | SpringBoot webFlux研究 |
-|  |  |
 |  |  |

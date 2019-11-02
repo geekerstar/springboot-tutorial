@@ -38,6 +38,7 @@
         <module>springboot-source</module>
         <module>springboot-elasticjob</module>
         <module>springboot-mybatis-generator</module>
+        <module>springboot-flowable</module>
     </modules>
 
 
