@@ -37,6 +37,7 @@
         <module>springboot-mybatis-generator</module>
         <module>springboot-flowable</module>
         <module>springboot-druid</module>
+        <module>springboot-exception</module>
     </modules>
     <packaging>pom</packaging>
 
