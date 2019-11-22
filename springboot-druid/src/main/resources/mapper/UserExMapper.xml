@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.geekerstar.mapper.UserMapper">
+<mapper namespace="com.geekerstar.mapper.UserExMapper">
 
 
-    <select id="getUsers" resultType="User">
+    <select id="getUsers" resultType="com.geekerstar.entity.User">
         SELECT * FROM tbl_user
     </select>
 
