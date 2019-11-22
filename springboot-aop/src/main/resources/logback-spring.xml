@@ -4,7 +4,7 @@
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
 
     <property scope="context" name="appName" value="test"/>
-    <property name="LOG_FILE" value="/home/logs/${appName}/${appName}.%d{yyyy-MM-dd}"/>
+    <property name="LOG_FILE" value="/Users/geekerstar/work/logs/${appName}/${appName}.%d{yyyy-MM-dd}"/>
     <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"/>
     <!--<property name="CONSOLE_LOG_PATTERN" value="${FILE_LOG_PATTERN}"/>-->
 
