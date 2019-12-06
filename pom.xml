@@ -40,6 +40,8 @@
         <module>springboot-exception</module>
         <module>springboot-fastjson</module>
         <module>springboot-kafka</module>
+        <module>springboot-jwt</module>
+        <module>springboot-shiro-simple</module>
     </modules>
     <packaging>pom</packaging>
 
