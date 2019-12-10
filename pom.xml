@@ -42,6 +42,7 @@
         <module>springboot-kafka</module>
         <module>springboot-jwt</module>
         <module>springboot-shiro-simple</module>
+        <module>springboot-mybatis-plus</module>
     </modules>
     <packaging>pom</packaging>
 
