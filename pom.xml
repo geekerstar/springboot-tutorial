@@ -43,6 +43,7 @@
         <module>springboot-jwt</module>
         <module>springboot-shiro-simple</module>
         <module>springboot-mybatis-plus</module>
+        <module>springboot-mybatis-plus-crud</module>
     </modules>
     <packaging>pom</packaging>
 
