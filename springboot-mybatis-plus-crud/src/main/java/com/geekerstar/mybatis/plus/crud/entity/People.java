@@ -34,7 +34,7 @@ public class People extends Model<People> {
      * UUID(4),
      * ID_WORKER_STR(5);
      */
-    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.ID_WORKER)
     private Long id;
 
     @TableField("name")
