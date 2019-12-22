@@ -22,7 +22,7 @@ import java.util.List;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = CrudApplication.class)
-public class PeopleServiceTest {
+public class ServiceTest {
 
     @Autowired
     private IPeopleService iPeopleService;
