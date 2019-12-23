@@ -1,5 +1,6 @@
 package com.geekerstar.aop.aspect;
 
+
 import com.google.gson.Gson;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -16,12 +17,12 @@ import java.lang.reflect.Method;
 
 /**
  * @author geekerstar
- * date: 2019-08-16 16:29
- * description:
+ * date: 2019-12-21 10:29
+ * description: 利用AOP拦截请求，打印请求响应相关信息
  */
 @Aspect
 @Component
-@Profile({"dev", "test"})
+@Profile({"dev"})
 public class WebLogAspect {
     private final static Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
     /**
@@ -51,19 +52,21 @@ public class WebLogAspect {
         String methodDescription = getAspectLogDescription(joinPoint);
 
         // 打印请求相关参数
-        logger.info("========================================== Start ==========================================");
+        logger.info("****************************************** 【请求开始】 ******************************************");
         // 打印请求 url
-        logger.info("URL            : {}", request.getRequestURL().toString());
+        logger.info("** 【请求路径】         : {}", request.getRequestURL().toString());
         // 打印描述信息
-        logger.info("Description    : {}", methodDescription);
+        logger.info("** 【请求描述】         : {}", methodDescription);
         // 打印 Http method
-        logger.info("HTTP Method    : {}", request.getMethod());
-        // 打印调用 com.geekerstar.controller 的全路径以及执行方法
-        logger.info("Class Method   : {}.{}", joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName());
+        logger.info("** 【请求类型】         : {}", request.getMethod());
+        // 打印调用 com.hantu.controller 的全路径以及执行方法
+        logger.info("** 【调用方法】         : {}.{}", joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName());
         // 打印请求的 IP
-        logger.info("IP             : {}", request.getRemoteAddr());
+        logger.info("** 【请求IP地址】       : {}", request.getRemoteAddr());
         // 打印请求入参
-        logger.info("Request Args   : {}", new Gson().toJson(joinPoint.getArgs()));
+        logger.info("** 【请求参数】         : {}", new Gson().toJson(joinPoint.getArgs()));
+        // 记录dao层操作
+        logger.info("------------------------------------------【数据层开始】------------------------------------------");
     }
 
     /**
@@ -74,7 +77,7 @@ public class WebLogAspect {
     @After("webLog()")
     public void doAfter() throws Throwable {
         // 接口结束后换行，方便分割查看
-        logger.info("=========================================== End ===========================================" + LINE_SEPARATOR);
+        logger.info("****************************************** 【请求结束】 ******************************************" + LINE_SEPARATOR);
     }
 
     /**
@@ -88,10 +91,12 @@ public class WebLogAspect {
     public Object doAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
         Object result = proceedingJoinPoint.proceed();
+        // 记录dao层操作
+        logger.info("------------------------------------------【数据层结束】------------------------------------------");
         // 打印出参
-        logger.info("Response Args  : {} ", new Gson().toJson(result));
+        logger.info("** 【响应参数】         : {}", new Gson().toJson(result));
         // 执行耗时
-        logger.info("Time-Consuming : {} ms", System.currentTimeMillis() - startTime);
+        logger.info("** 【请求耗时】         : {} ms", System.currentTimeMillis() - startTime);
         return result;
     }
 
