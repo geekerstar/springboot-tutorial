@@ -45,6 +45,9 @@
         <module>springboot-mybatis-plus</module>
         <module>springboot-mybatis-plus-crud</module>
         <module>springboot-resource</module>
+        <module>springboot-task</module>
+        <module>springboot-websocket</module>
+        <module>springboot-mybatis-plus-advance</module>
     </modules>
     <packaging>pom</packaging>
 
