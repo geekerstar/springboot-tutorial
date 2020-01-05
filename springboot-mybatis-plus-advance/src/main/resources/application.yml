@@ -1,0 +1,32 @@
+# 配置数据源
+spring:
+  datasource:
+    name: test
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+# 配置日志
+logging:
+  level:
+    root: warn
+    com.don.mp.dao: trace
+  pattern:
+    console: '%p%m%n'
+# Mybatis-plus配置内容
+mybatis-plus:
+  #扫描resource目录下的mapper文件夹中的xml文件(多模块项目用classpath*)
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    use-column-label: true
+  #全局类名
+  type-aliases-package: com.don.mp.entity
+  global-config:
+    db-config:
+      #驼峰下划线转换
+      table-underline: true
+      #逻辑删除配置
+      logic-delete-value: 1
+      logic-not-delete-value: 0
