@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @SpringBootApplication
-@MapperScan("com.songguoliang.springboot.mapper")
+@MapperScan("com.geekerstar.jwt.mapper")
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
