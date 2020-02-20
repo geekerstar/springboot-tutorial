@@ -57,6 +57,15 @@ public class FreemarkerController {
         list.add("php");
         list.add("html");
         mv.addObject("mylist", list);
+
+        List<Student> studentList = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            Student student = new Student();
+            student.setName(i+"name");
+            student.setSex(i+"sex");
+            studentList.add(student);
+        }
+        mv.addObject("student",studentList);
         return mv;
     }
 
