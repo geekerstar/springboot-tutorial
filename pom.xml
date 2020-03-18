@@ -48,6 +48,8 @@
         <module>springboot-task</module>
         <module>springboot-websocket</module>
         <module>springboot-mybatis-plus-advance</module>
+        <module>springboot-base</module>
+        <module>springboot-webssh</module>
     </modules>
     <packaging>pom</packaging>
 
