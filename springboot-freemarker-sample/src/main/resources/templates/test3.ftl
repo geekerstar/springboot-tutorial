@@ -21,6 +21,7 @@
 <ul>
     <li>集合list实体对象</li>
     <#list student as item>
+        索引值： ${item_index+1}
         <font color="red" size="10px">name=${item.name}</font>
         <font color="red" size="10px">name=${item.sex}</font>
         <br>

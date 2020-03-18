@@ -3,6 +3,7 @@ package com.geekerstar.freemarker.controller;
 import com.geekerstar.freemarker.method.SortMethod;
 import freemarker.template.SimpleSequence;
 import freemarker.template.TemplateModelException;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,7 @@ import java.util.*;
  * date: 2019-08-19 10:40
  * description:
  */
-@RestController
+@Controller
 @RequestMapping("/")
 public class FreemarkerController {
 
