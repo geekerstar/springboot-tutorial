@@ -50,6 +50,7 @@
         <module>springboot-mybatis-plus-advance</module>
         <module>springboot-base</module>
         <module>springboot-webssh</module>
+        <module>springboot-aop-limit</module>
     </modules>
     <packaging>pom</packaging>
 
