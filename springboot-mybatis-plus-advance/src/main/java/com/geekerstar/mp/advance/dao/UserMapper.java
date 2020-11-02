@@ -4,16 +4,16 @@ import com.baomidou.mybatisplus.annotation.SqlParser;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
-import com.don.mp.entity.User;
+import com.geekerstar.mp.advance.entity.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
 /**
- * @author dyz
- * @program boot-use
- * @create 2019-09-11 13:30
+ * @author geekerstar
+ * @date 2020/11/2 17:33
+ * @description
  */
 public interface UserMapper extends BaseMapper<User> {
 

@@ -1,8 +1,8 @@
 package com.geekerstar;
 
-import com.don.mp.config.MybatisPlusConfiguration;
-import com.don.mp.dao.UserMapper;
-import com.don.mp.entity.User;
+import com.geekerstar.mp.advance.config.MybatisPlusConfiguration;
+import com.geekerstar.mp.advance.dao.UserMapper;
+import com.geekerstar.mp.advance.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

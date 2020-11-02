@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 /**
- * @author dyz
- * @program boot-use
- * @create 2019-09-11 13:26
+ * @author geekerstar
+ * @date 2020/11/2 17:33
+ * @description
  */
 @Data
 @Builder

@@ -17,9 +17,9 @@ import org.springframework.context.annotation.Profile;
 import java.util.*;
 
 /**
- * @author dyz
- * @program boot-use
- * @create 2019-09-11 13:39
+ * @author geekerstar
+ * @date 2020/11/2 17:33
+ * @description
  */
 @Configuration
 public class MybatisPlusConfiguration {

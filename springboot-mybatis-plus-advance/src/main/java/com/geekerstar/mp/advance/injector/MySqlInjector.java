@@ -5,15 +5,15 @@ import com.baomidou.mybatisplus.core.injector.DefaultSqlInjector;
 import com.baomidou.mybatisplus.extension.injector.methods.additional.AlwaysUpdateSomeColumnById;
 import com.baomidou.mybatisplus.extension.injector.methods.additional.InsertBatchSomeColumn;
 import com.baomidou.mybatisplus.extension.injector.methods.additional.LogicDeleteByIdWithFill;
-import com.don.mp.method.DeleteAllMethod;
+import com.geekerstar.mp.advance.method.DeleteAllMethod;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
- * @author dyz
- * @program boot-use
- * @create 2019-09-11 16:09
+ * @author geekerstar
+ * @date 2020/11/2 17:33
+ * @description
  */
 @Component
 public class MySqlInjector extends DefaultSqlInjector {

@@ -6,11 +6,9 @@ import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlSource;
 
 /**
- * @author dyz
- * @program boot-use
- * @create 2019-09-11 16:03
- * <p>
- * Sql注入器
+ * @author geekerstar
+ * @date 2020/11/2 17:33
+ * @description SQL注入器
  */
 public class DeleteAllMethod extends AbstractMethod {
     @Override
