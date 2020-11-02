@@ -20,28 +20,28 @@ import java.util.*;
  * @author geekerstar
  * date: 2019/10/29 13:11
  * description: 工作流测试公共方法
- *
+ * <p>
  * 使用说明：
  * 1、先启动好此项目，然后创建一个流程：
  * http://localhost:8080/test/add?userId=666666&money=20000
  * 提交成功.流程Id为：c832b312-fa0f-11e9-bf7a-76be14ce6a0f
- *
+ * <p>
  * 2、查询待办列表:
  * http://localhost:8080/test/list?userId=666666
  * [Task[id=c8357238-fa0f-11e9-bf7a-76be14ce6a0f, name=出差报销]]
- *
+ * <p>
  * 3、同意：
  * http://localhost:8080/test/apply?taskId=
  * 申请通过！
- *
+ * <p>
  * 4、驳回：
  * http://localhost:8080/test/reject?taskId=
  * 申请驳回！
- *
+ * <p>
  * 5、退回任意节点
  * http://localhost:8080/test/back?taskId=
  * 退回成功
- *
+ * <p>
  * 6、生成流程图：
  * http://localhost:8080/test/processDiagram?processId=
  */
@@ -132,7 +132,7 @@ public class ExpenseController {
      * @return
      */
     @GetMapping(value = "/back")
-    public String back(String processId,String currentId,String targetId){
+    public String back(String processId, String currentId, String targetId) {
         runtimeService.createChangeActivityStateBuilder()
                 .processInstanceId(processId)
                 .moveActivityIdsToSingleActivityId(Collections.singletonList(currentId), targetId)
@@ -173,7 +173,7 @@ public class ExpenseController {
         BpmnModel bpmnModel = repositoryService.getBpmnModel(pi.getProcessDefinitionId());
         ProcessEngineConfiguration engconf = processEngine.getProcessEngineConfiguration();
         ProcessDiagramGenerator diagramGenerator = engconf.getProcessDiagramGenerator();
-        InputStream in = diagramGenerator.generateDiagram(bpmnModel, "png", activityIds, flows, engconf.getActivityFontName(), engconf.getLabelFontName(), engconf.getAnnotationFontName(), engconf.getClassLoader(), 1.0,true);
+        InputStream in = diagramGenerator.generateDiagram(bpmnModel, "png", activityIds, flows, engconf.getActivityFontName(), engconf.getLabelFontName(), engconf.getAnnotationFontName(), engconf.getClassLoader(), 1.0, true);
         OutputStream out = null;
         byte[] buf = new byte[1024];
         int legth = 0;

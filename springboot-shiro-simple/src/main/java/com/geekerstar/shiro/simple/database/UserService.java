@@ -9,7 +9,7 @@ public class UserService {
 
     public UserBean getUser(String username) {
         // 没有此用户直接返回null
-        if (! DataSource.getData().containsKey(username))
+        if (!DataSource.getData().containsKey(username))
             return null;
 
         UserBean user = new UserBean();

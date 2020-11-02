@@ -2,8 +2,9 @@ package com.geekerstar.springbootelasticjob.dao;
 
 import com.geekerstar.springbootelasticjob.model.TmallOrder;
 import com.geekerstar.springbootelasticjob.model.TmallOrderExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface TmallOrderMapper {
     /**

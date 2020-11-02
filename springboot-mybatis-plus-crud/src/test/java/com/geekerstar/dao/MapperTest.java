@@ -42,7 +42,7 @@ public class MapperTest {
      */
     @Test
     public void insert() {
-        People people = new People(1087982257332887555L, "12133", 18, "1231sadd@qq.com", null, LocalDateTime.now(),"备注");
+        People people = new People(1087982257332887555L, "12133", 18, "1231sadd@qq.com", null, LocalDateTime.now(), "备注");
         int result = peopleMapper.insert(people);
         Assert.assertEquals(1, result);
         log.info(" PeopleMapperTest insert -- " + result);

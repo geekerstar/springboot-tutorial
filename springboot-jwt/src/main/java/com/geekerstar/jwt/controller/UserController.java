@@ -19,13 +19,13 @@ public class UserController {
 
     @GetMapping("/users")
     public PageInfo<User> lists(@RequestParam(defaultValue = "1") int pageNo, @RequestParam(defaultValue = "10") int pageSize) {
-        PageHelper.startPage(pageNo,pageSize);
+        PageHelper.startPage(pageNo, pageSize);
         PageInfo<User> pageInfo = new PageInfo<>(userService.getUsers());
         return pageInfo;
     }
 
     @GetMapping("/user/{id}")
-    public User selectUserById(@PathVariable("id") Long id){
+    public User selectUserById(@PathVariable("id") Long id) {
         return userService.selectById(id);
     }
 

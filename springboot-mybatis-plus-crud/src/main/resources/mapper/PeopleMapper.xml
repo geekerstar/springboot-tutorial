@@ -5,10 +5,12 @@
 
 
     <select id="selectCustomize2" resultType="com.geekerstar.mybatis.plus.crud.entity.People">
-        select * from people ${ew.customSqlSegment}
+        select *
+        from people ${ew.customSqlSegment}
     </select>
 
     <select id="selectByPage" resultType="com.geekerstar.mybatis.plus.crud.entity.People">
-        select * from people ${ew.customSqlSegment}
+        select *
+        from people ${ew.customSqlSegment}
     </select>
 </mapper>

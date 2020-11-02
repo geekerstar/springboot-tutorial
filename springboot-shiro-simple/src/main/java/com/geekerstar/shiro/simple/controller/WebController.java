@@ -1,6 +1,11 @@
 package com.geekerstar.shiro.simple.controller;
 
 
+import com.geekerstar.shiro.simple.bean.ResponseBean;
+import com.geekerstar.shiro.simple.database.UserBean;
+import com.geekerstar.shiro.simple.database.UserService;
+import com.geekerstar.shiro.simple.exception.UnauthorizedException;
+import com.geekerstar.shiro.simple.util.JWTUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
@@ -9,11 +14,6 @@ import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
-import com.geekerstar.shiro.simple.bean.ResponseBean;
-import com.geekerstar.shiro.simple.database.UserBean;
-import com.geekerstar.shiro.simple.database.UserService;
-import com.geekerstar.shiro.simple.exception.UnauthorizedException;
-import com.geekerstar.shiro.simple.util.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

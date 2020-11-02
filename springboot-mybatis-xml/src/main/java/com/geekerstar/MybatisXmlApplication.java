@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.geekerstar.mapper")
 public class MybatisXmlApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MybatisXmlApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MybatisXmlApplication.class, args);
+    }
 }

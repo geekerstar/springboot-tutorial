@@ -11,21 +11,21 @@ public class MyShardingStrategy implements JobShardingStrategy {
                                                     String jobName, int shardingTotalCount) {
         Map<JobInstance, List<Integer>> rtnMap = new HashMap<>();
         ArrayDeque<Integer> queue = new ArrayDeque<>(shardingTotalCount);
-        for (int i=0;i<shardingTotalCount;i++){
+        for (int i = 0; i < shardingTotalCount; i++) {
             queue.add(i);
         }
 
-        while (queue.size()>0){
-            for (JobInstance jobInstance : jobInstances){
-                if (queue.size()>0){
+        while (queue.size() > 0) {
+            for (JobInstance jobInstance : jobInstances) {
+                if (queue.size() > 0) {
                     Integer shardingItem = queue.pop();
                     List<Integer> integers = rtnMap.get(jobInstance);
-                    if (integers!=null&&integers.size()>0){
+                    if (integers != null && integers.size() > 0) {
                         integers.add(shardingItem);
-                    }else {
+                    } else {
                         List<Integer> list = new ArrayList<>();
                         list.add(shardingItem);
-                        rtnMap.put(jobInstance,list);
+                        rtnMap.put(jobInstance, list);
                     }
                 }
             }

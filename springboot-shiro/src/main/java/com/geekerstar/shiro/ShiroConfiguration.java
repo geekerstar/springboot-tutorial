@@ -44,7 +44,6 @@ public class ShiroConfiguration {
 
     /**
      * 再web程序中，shiro进行权限控制全部是通过一组过滤器集合进行控制
-     *
      */
     @Bean
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
@@ -63,7 +62,7 @@ public class ShiroConfiguration {
          *     value = 过滤器类型
          *
          */
-        Map<String,String> filterMap = new LinkedHashMap<>();
+        Map<String, String> filterMap = new LinkedHashMap<>();
         //filterMap.put("/user/home","anon");//当前请求地址可以匿名访问
 
         //具有某中权限才能访问
@@ -73,7 +72,7 @@ public class ShiroConfiguration {
         //使用过滤器的形式配置请求地址的依赖角色
         //filterMap.put("/user/home","roles[系统管理员]");
 
-        filterMap.put("/user/**","authc");//当前请求地址必须认证之后可以访问
+        filterMap.put("/user/**", "authc");//当前请求地址必须认证之后可以访问
 
         filterFactory.setFilterChainDefinitionMap(filterMap);
 
@@ -122,8 +121,6 @@ public class ShiroConfiguration {
         redisCacheManager.setRedisManager(redisManager());
         return redisCacheManager;
     }
-
-
 
 
     //开启对shior注解的支持

@@ -20,7 +20,7 @@ import java.util.Set;
  * AuthCachePrincipal:
  *  redis和shiro插件包提供的接口
  */
-public class User implements Serializable ,AuthCachePrincipal {
+public class User implements Serializable, AuthCachePrincipal {
     private static final long serialVersionUID = 4297464181093070302L;
     /**
      * ID
@@ -31,8 +31,8 @@ public class User implements Serializable ,AuthCachePrincipal {
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name="pe_user_role",joinColumns={@JoinColumn(name="user_id",referencedColumnName="id")},
-            inverseJoinColumns={@JoinColumn(name="role_id",referencedColumnName="id")}
+    @JoinTable(name = "pe_user_role", joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")}
     )
     private Set<Role> roles = new HashSet<Role>();//用户与角色   多对多
 

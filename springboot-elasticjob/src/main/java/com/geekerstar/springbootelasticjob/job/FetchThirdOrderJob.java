@@ -2,7 +2,6 @@ package com.geekerstar.springbootelasticjob.job;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.dataflow.DataflowJob;
-import com.geekerstar.autoconfig.ElasticDataflowJob;
 import com.geekerstar.springbootelasticjob.dao.JdOrderMapper;
 import com.geekerstar.springbootelasticjob.dao.TmallOrderMapper;
 import com.geekerstar.springbootelasticjob.model.AllOrder;
@@ -34,16 +33,16 @@ public class FetchThirdOrderJob implements DataflowJob<Object> {
     @Override
     public List<Object> fetchData(ShardingContext shardingContext) {
         //京东订单
-        if (shardingContext.getShardingItem() == 0){
+        if (shardingContext.getShardingItem() == 0) {
             List<JdOrder> jdOrders = jdOrderMapper.getNotFetchedOrder(5);
-            if (jdOrders!=null&&jdOrders.size()>0){
+            if (jdOrders != null && jdOrders.size() > 0) {
                 List<Object> jdOrderList = jdOrders.stream().map(jdOrder -> (Object) jdOrder).collect(toList());
                 return jdOrderList;
             }
-        }else {//天猫订单
+        } else {//天猫订单
             List<TmallOrder> tmallOrders = tmallOrderMapper.getNotFetchedOrder(5);
-            if (tmallOrders!=null&&tmallOrders.size()>0){
-                List<Object> tmallOrderList = tmallOrders.stream().map(tmallOrder -> (Object)tmallOrder).collect(toList());
+            if (tmallOrders != null && tmallOrders.size() > 0) {
+                List<Object> tmallOrderList = tmallOrders.stream().map(tmallOrder -> (Object) tmallOrder).collect(toList());
                 return tmallOrderList;
             }
         }
@@ -53,10 +52,10 @@ public class FetchThirdOrderJob implements DataflowJob<Object> {
     @Override
     public void processData(ShardingContext shardingContext, List<Object> data) {
         //京东订单
-        if (shardingContext.getShardingItem() ==0){
-            if (data!=null&&data.size()>0){
+        if (shardingContext.getShardingItem() == 0) {
+            if (data != null && data.size() > 0) {
                 List<JdOrder> jdOrders = data.stream().map(d -> (JdOrder) d).collect(toList());
-                for (JdOrder jdOrder : jdOrders){
+                for (JdOrder jdOrder : jdOrders) {
                     AllOrder allOrder = new AllOrder();
                     allOrder.setThirdOrderId(jdOrder.getId());
                     allOrder.setType(0);//京东订单
@@ -68,10 +67,10 @@ public class FetchThirdOrderJob implements DataflowJob<Object> {
                     orderService.processJdOrder(allOrder);
                 }
             }
-        }else {//天猫订单
-            if (data!=null&&data.size()>0){
+        } else {//天猫订单
+            if (data != null && data.size() > 0) {
                 List<TmallOrder> tmallOrders = data.stream().map(d -> (TmallOrder) d).collect(toList());
-                for (TmallOrder tmallOrder : tmallOrders){
+                for (TmallOrder tmallOrder : tmallOrders) {
                     AllOrder allOrder = new AllOrder();
                     allOrder.setThirdOrderId(tmallOrder.getId());
                     allOrder.setType(1);//天猫订单

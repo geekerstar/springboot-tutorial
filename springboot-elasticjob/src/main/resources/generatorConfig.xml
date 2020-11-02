@@ -9,29 +9,30 @@
                         connectionURL="jdbc:mysql://localhost:3306/dataflow?serverTimezone=Asia/Shanghai&amp;useSSL=false"
                         userId="root"
                         password="123456">
-            <property name="nullCatalogMeansCurrent" value="true" />
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
-        <javaTypeResolver >
-            <property name="forceBigDecimals" value="false" />
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <javaModelGenerator targetPackage="com.example.springbootelasticjob.model" targetProject="src\main\java">
-            <property name="enableSubPackages" value="true" />
-            <property name="trimStrings" value="true" />
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mybatis"  targetProject="src\main\resources">
-            <property name="enableSubPackages" value="true" />
+        <sqlMapGenerator targetPackage="mybatis" targetProject="src\main\resources">
+            <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.springbootelasticjob.dao"  targetProject="src\main\java">
-            <property name="enableSubPackages" value="true" />
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.springbootelasticjob.dao"
+                             targetProject="src\main\java">
+            <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table schema="dataflow" tableName="all_order" domainObjectName="AllOrder" ></table>
-        <table schema="dataflow" tableName="jd_order" domainObjectName="JdOrder" ></table>
-        <table schema="dataflow" tableName="tmall_order" domainObjectName="TmallOrder" ></table>
+        <table schema="dataflow" tableName="all_order" domainObjectName="AllOrder"></table>
+        <table schema="dataflow" tableName="jd_order" domainObjectName="JdOrder"></table>
+        <table schema="dataflow" tableName="tmall_order" domainObjectName="TmallOrder"></table>
 
     </context>
 </generatorConfiguration>

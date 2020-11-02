@@ -19,7 +19,7 @@ import java.util.List;
 public class RedisTest {
 
     @Autowired
-    private RedisTemplate<String,String> redisTemplate;
+    private RedisTemplate<String, String> redisTemplate;
 
     @Autowired
     private UserRepository userRepository;
@@ -29,7 +29,7 @@ public class RedisTest {
         //1、从redis中获得数据 数据的形式json字符串
         String userListJson = redisTemplate.boundValueOps("user.findAll").get();
         //2、判断redis中是否存在数据
-        if(null==userListJson){
+        if (null == userListJson) {
             //3、不存在数据 从数据库查询
             List<User> all = userRepository.findAll();
             //4、将查询出的数据存储到redis缓存中
@@ -40,7 +40,7 @@ public class RedisTest {
 
             System.out.println("=======从数据库中获得user的数据======");
 
-        }else{
+        } else {
             System.out.println("=======从redis缓存中获得user的数据======");
         }
 

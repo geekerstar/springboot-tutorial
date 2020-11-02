@@ -15,10 +15,16 @@ import java.lang.annotation.Target;
 @Component
 public @interface ElasticSimpleJob {
     String jobName() default "";
+
     String cron() default "";
+
     int shardingTotalCount() default 1;
+
     boolean overwrite() default false;
+
     Class<? extends JobShardingStrategy> jobStrategy() default AverageAllocationJobShardingStrategy.class;
+
     boolean jobEvent() default false;
+
     Class<? extends ElasticJobListener>[] jobListner() default {};
 }

@@ -4,7 +4,8 @@
 
 
     <select id="getUsers" resultType="com.geekerstar.entity.User">
-        SELECT * FROM tbl_user
+        SELECT *
+        FROM tbl_user
     </select>
 
 </mapper>

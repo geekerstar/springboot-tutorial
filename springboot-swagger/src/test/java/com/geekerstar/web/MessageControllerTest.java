@@ -34,23 +34,23 @@ public class MessageControllerTest {
         final MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
         params.add("text", "text");
         params.add("summary", "summary");
-        String mvcResult=  mockMvc.perform(MockMvcRequestBuilders.post("/message")
+        String mvcResult = mockMvc.perform(MockMvcRequestBuilders.post("/message")
                 .params(params)).andReturn().getResponse().getContentAsString();
-        System.out.println("Result === "+mvcResult);
+        System.out.println("Result === " + mvcResult);
     }
 
     @Test
     public void getAllMessages() throws Exception {
-        String mvcResult= mockMvc.perform(MockMvcRequestBuilders.get("/messages"))
+        String mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/messages"))
                 .andReturn().getResponse().getContentAsString();
-        System.out.println("Result === "+mvcResult);
+        System.out.println("Result === " + mvcResult);
     }
 
     @Test
     public void getMessage() throws Exception {
-        String mvcResult= mockMvc.perform(MockMvcRequestBuilders.get("/message/6"))
+        String mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/message/6"))
                 .andReturn().getResponse().getContentAsString();
-        System.out.println("Result === "+mvcResult);
+        System.out.println("Result === " + mvcResult);
     }
 
     @Test
@@ -59,9 +59,9 @@ public class MessageControllerTest {
         params.add("id", "6");
         params.add("text", "text");
         params.add("summary", "summary");
-        String mvcResult= mockMvc.perform(MockMvcRequestBuilders.put("/message").params(params))
+        String mvcResult = mockMvc.perform(MockMvcRequestBuilders.put("/message").params(params))
                 .andReturn().getResponse().getContentAsString();
-        System.out.println("Result === "+mvcResult);
+        System.out.println("Result === " + mvcResult);
     }
 
     @Test
@@ -69,28 +69,28 @@ public class MessageControllerTest {
         final MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
         params.add("id", "6");
         params.add("text", "text");
-        String mvcResult= mockMvc.perform(MockMvcRequestBuilders.patch("/message/text").params(params))
+        String mvcResult = mockMvc.perform(MockMvcRequestBuilders.patch("/message/text").params(params))
                 .andReturn().getResponse().getContentAsString();
-        System.out.println("Result === "+mvcResult);
+        System.out.println("Result === " + mvcResult);
     }
 
     @Test
     public void deleteMessage() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.delete("/message/6"))
                 .andReturn();
-        String mvcResult= mockMvc.perform(MockMvcRequestBuilders.get("/messages"))
+        String mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/messages"))
                 .andReturn().getResponse().getContentAsString();
-        System.out.println("Result === "+mvcResult);
+        System.out.println("Result === " + mvcResult);
     }
 
-    private void  saveMessages()  {
-        for (int i=1;i<10;i++){
+    private void saveMessages() {
+        for (int i = 1; i < 10; i++) {
             final MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
-            params.add("id",""+i);
-            params.add("text", "text"+i);
-            params.add("summary", "summary"+i);
+            params.add("id", "" + i);
+            params.add("text", "text" + i);
+            params.add("summary", "summary" + i);
             try {
-                MvcResult mvcResult=  mockMvc.perform(MockMvcRequestBuilders.post("/message")
+                MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post("/message")
                         .params(params)).andReturn();
             } catch (Exception e) {
                 e.printStackTrace();

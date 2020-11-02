@@ -32,7 +32,7 @@ public class OrderService {
     @Autowired
     private TmallOrderMapper tmallOrderMapper;
 
-    public int insertOrder(){
+    public int insertOrder() {
         Order order = new Order();
         order.setAmount(BigDecimal.TEN);
         order.setReceiveName("Green");
@@ -48,19 +48,19 @@ public class OrderService {
     }
 
     public List<Order> getOrder(Calendar now, int shardingTotalCount, int shardingItem) {
-        return orderMapper.getOrder(now.getTime(),shardingTotalCount,shardingItem);
+        return orderMapper.getOrder(now.getTime(), shardingTotalCount, shardingItem);
     }
 
     public void cancelOrder(Integer orderId, Date updateTime, int status, String updateUser, Date updateNow) {
-        orderMapper.cancelOrder(orderId,updateTime,status,updateUser,updateNow);
+        orderMapper.cancelOrder(orderId, updateTime, status, updateUser, updateNow);
     }
 
     public void produceThirdOrder() {
-        for (int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             Random random = new Random();
             int randomInt = random.nextInt(2);
             //京东订单
-            if (randomInt ==0){
+            if (randomInt == 0) {
                 log.info("插入京东订单");
                 JdOrder jdOrder = new JdOrder();
                 jdOrder.setStatus(0);//未抓取
@@ -70,7 +70,7 @@ public class OrderService {
                 jdOrder.setUpdateUser("jdUser");
                 jdOrder.setUpdateTime(new Date());
                 jdOrderMapper.insertSelective(jdOrder);
-            }else {//天猫订单
+            } else {//天猫订单
                 log.info("插入天猫订单");
                 TmallOrder tmallOrder = new TmallOrder();
                 tmallOrder.setOrderStatus(0);//未抓取

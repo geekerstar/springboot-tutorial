@@ -20,6 +20,7 @@ public interface PeopleMapper extends BaseMapper<People> {
 
     /**
      * 自定义SQL查询，注解方式
+     *
      * @param wrapper
      * @return
      */
@@ -28,6 +29,7 @@ public interface PeopleMapper extends BaseMapper<People> {
 
     /**
      * 自定义SQL查询，xml方式
+     *
      * @param wrapper
      * @return
      */
@@ -36,6 +38,7 @@ public interface PeopleMapper extends BaseMapper<People> {
 
     /**
      * 自定义分页查询
+     *
      * @param page
      * @param wrapper
      * @return

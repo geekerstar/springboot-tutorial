@@ -11,6 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AopLimitApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AopLimitApplication.class,args);
+        SpringApplication.run(AopLimitApplication.class, args);
     }
 }

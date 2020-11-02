@@ -10,14 +10,14 @@
     <context id="MySql" defaultModelType="flat">
 
         <!-- 生成的POJO实现java.io.Serializable接口 -->
-        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <!-- 自动为entity生成swagger2文档-->
         <plugin type="mybatis.generator.plugins.GeneratorSwagger2Doc">
-            <property name="apiModelAnnotationPackage" value="io.swagger.annotations.ApiModel" />
-            <property name="apiModelPropertyAnnotationPackage" value="io.swagger.annotations.ApiModelProperty" />
+            <property name="apiModelAnnotationPackage" value="io.swagger.annotations.ApiModel"/>
+            <property name="apiModelPropertyAnnotationPackage" value="io.swagger.annotations.ApiModelProperty"/>
         </plugin>
         <!-- 扩展entity的set方法-->
-        <plugin type="mybatis.generator.plugins.ExtendEntitySetter" />
+        <plugin type="mybatis.generator.plugins.ExtendEntitySetter"/>
 
         <!--注释-->
         <commentGenerator>
@@ -36,11 +36,12 @@
         <!-- 生成POJO对象，并将类放到com.geekerstar.entity包下 -->
         <javaModelGenerator targetPackage="com.geekerstar.entity" targetProject="src/main/java"></javaModelGenerator>
         <!-- 生成mapper xml文件，并放到resources下的mapper文件夹下 -->
-        <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources"></sqlMapGenerator>
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"></sqlMapGenerator>
 
 
         <!-- 生成mapper xml对应dao接口，放到com.geekerstar.mapper包下-->
-        <javaClientGenerator targetPackage="com.geekerstar.mapper" targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>
+        <javaClientGenerator targetPackage="com.geekerstar.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"></javaClientGenerator>
 
         <!-- table标签可以有多个，至少一个，tableName指定表名，可以使用_和%通配符 -->
         <table tableName="bs_city">

@@ -1,9 +1,9 @@
 package com.geekerstar.webflux.controller;
 
+import com.geekerstar.webflux.entity.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
-import com.geekerstar.webflux.entity.User;
 
 
 @RestController

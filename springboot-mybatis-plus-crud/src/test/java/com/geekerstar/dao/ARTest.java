@@ -25,7 +25,7 @@ public class ARTest {
      * INSERT INTO people ( id, name, age, email, create_time ) VALUES ( ?, ?, ?, ?, ? )
      */
     @Test
-    public void insert(){
+    public void insert() {
         People people = People.builder().id(1087982257332887559L).name("AR").age(19).email("2323232@qq.com").createTime(LocalDateTime.now()).build();
         boolean insert = people.insert();
         log.info(" - AR Insert - " + insert);
@@ -36,7 +36,7 @@ public class ARTest {
      * SELECT id,name,age,email,manager_id,create_time FROM people WHERE id=?
      */
     @Test
-    public void selectById(){
+    public void selectById() {
         People people = People.builder().build();
         People selectPeople = people.selectById(1087982257332887559L);
         // 测试是否为同一个对象，false不是同一个对象
@@ -50,7 +50,7 @@ public class ARTest {
      * UPDATE people SET name=?, age=?, email=?, create_time=? WHERE id=?
      */
     @Test
-    public void updateById(){
+    public void updateById() {
         People people = People.builder().id(1087982257332887559L).name("AR").age(19).email("247507792@qq.com").createTime(LocalDateTime.now()).build();
         boolean update = people.updateById();
         log.info(" - AR updateById - " + update);
@@ -61,7 +61,7 @@ public class ARTest {
      * DELETE FROM people WHERE id=?
      */
     @Test
-    public void deleteById(){
+    public void deleteById() {
         People people = People.builder().id(1087982257332887559L).build();
         boolean delete = people.deleteById();
         log.info(" - AR deleteById - " + delete);
@@ -76,7 +76,7 @@ public class ARTest {
      * 这个方法就是保存操作，如果数据库中无此id，则为insert插入操作，如果数据库中有此id，则相当于根据此id修改操作
      */
     @Test
-    public void insertOrUpdate(){
+    public void insertOrUpdate() {
         People people = People.builder().id(1087982257332887559L).name("AR1").age(19).email("123123123123@qq.com").createTime(LocalDateTime.now()).build();
         boolean insertOrUpdate = people.insertOrUpdate();
         log.info(" - AR insertOrUpdate - " + insertOrUpdate);
@@ -87,7 +87,7 @@ public class ARTest {
      * INSERT INTO people ( id, name, age, email, create_time ) VALUES ( ?, ?, ?, ?, ? )
      */
     @Test
-    public void insertAutoId(){
+    public void insertAutoId() {
         People people = People.builder().name("ARauto").age(22).email("23231@142.com").createTime(LocalDateTime.now()).build();
         boolean insert = people.insert();
         log.info(" - AR insertAutoId - " + insert);

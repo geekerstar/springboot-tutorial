@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/demo")
-@Api(value = "测试Swagger2",description="简单的API")
+@Api(value = "测试Swagger2", description = "简单的API")
 public class UserController1 {
 
     @ApiOperation(value = "创建用户", notes = "根据User对象创建用户")

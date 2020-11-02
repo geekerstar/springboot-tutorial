@@ -33,7 +33,7 @@ public class ServiceTest {
      * Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 5
      */
     @Test
-    public void getOne(){
+    public void getOne() {
         People people = iPeopleService.getOne(Wrappers.<People>lambdaQuery().gt(People::getAge, 39));
         System.out.println(people);
         log.info("IService getOne - " + people);
@@ -45,7 +45,7 @@ public class ServiceTest {
      * WARNWarn: execute Method There are  5 results.
      */
     @Test
-    public void getOne2(){
+    public void getOne2() {
         People people = iPeopleService.getOne(Wrappers.<People>lambdaQuery().gt(People::getAge, 20), false);
         System.out.println(people);
         log.info("IService getOne2 - " + people);
@@ -58,7 +58,7 @@ public class ServiceTest {
      * DEBUG==> Parameters: batch2(String), 20(Integer), 792171678@qq.com(String)
      */
     @Test
-    public void saveBatch(){
+    public void saveBatch() {
         People batch1 = People.builder().name("batch1").age(19).email("23123123@qq.com").build();
         People batch2 = People.builder().name("batch2").age(22).email("1231231312@qq.com").build();
         List<People> peopleList = Arrays.asList(batch1, batch2);
@@ -71,7 +71,7 @@ public class ServiceTest {
      * SELECT id,name,age,email,manager_id,create_time FROM people WHERE age > ? AND name LIKE ?
      */
     @Test
-    public void chain(){
+    public void chain() {
         List<People> peopleList = iPeopleService.lambdaQuery().gt(People::getAge, 10).like(People::getName, "d").list();
         peopleList.forEach(System.out::println);
     }
@@ -81,7 +81,7 @@ public class ServiceTest {
      * UPDATE people SET age=? WHERE age = ?
      */
     @Test
-    public void chain2(){
+    public void chain2() {
         boolean update = iPeopleService.lambdaUpdate().eq(People::getAge, 20).set(People::getAge, 22).update();
         log.info(" lambdaUpdate - " + update);
     }
@@ -91,7 +91,7 @@ public class ServiceTest {
      * DELETE FROM people WHERE age = ?
      */
     @Test
-    public void chain3(){
+    public void chain3() {
         boolean remove = iPeopleService.lambdaUpdate().eq(People::getAge, 22).remove();
         log.info(" lambdaUpdate - " + remove);
     }

@@ -19,15 +19,16 @@ public class ZookeeperAutoConfig {
 
     /**
      * zookeeper注册中心
+     *
      * @return
      */
     @Bean(initMethod = "init")
-    public CoordinatorRegistryCenter zkCenter(){
+    public CoordinatorRegistryCenter zkCenter() {
         String serverList = zookeeperProperties.getServerList();
         String namespace = zookeeperProperties.getNamespace();
-        ZookeeperConfiguration zc = new ZookeeperConfiguration(serverList,namespace);
+        ZookeeperConfiguration zc = new ZookeeperConfiguration(serverList, namespace);
 
-        ZookeeperRegistryCenter crc=new ZookeeperRegistryCenter(zc);
+        ZookeeperRegistryCenter crc = new ZookeeperRegistryCenter(zc);
 
         return crc;
     }

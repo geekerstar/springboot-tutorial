@@ -18,6 +18,7 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 public class WebSSHWebSocketConfig implements WebSocketConfigurer {
     @Autowired
     WebSSHWebSocketHandler webSSHWebSocketHandler;
+
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry webSocketHandlerRegistry) {
         //socket通道

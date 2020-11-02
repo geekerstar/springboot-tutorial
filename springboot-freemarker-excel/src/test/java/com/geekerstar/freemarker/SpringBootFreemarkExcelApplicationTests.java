@@ -1,17 +1,12 @@
 package com.geekerstar.freemarker;
 
+import com.geekerstar.freemarker.entity.Commodity;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-import lombok.Builder;
-import lombok.Data;
-import org.assertj.core.util.Maps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.ui.freemarker.FreeMarkerConfigurationFactory;
-import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
-import com.geekerstar.freemarker.entity.Commodity;
 
 import java.io.File;
 import java.io.FileWriter;

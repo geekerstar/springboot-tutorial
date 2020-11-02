@@ -54,12 +54,12 @@ public class SelectMapperOtherTest {
 
     /**
      * 注意：是返回第一个字段的值. 如：
-     *     DEBUG==>  Preparing: SELECT id,name FROM people WHERE name LIKE ? AND age < ?
-     *     DEBUG==> Parameters: 王%(String), 40(Integer)
-     *     TRACE<==    Columns: id, name
-     *     TRACE<==        Row: 1088248166370832385, 王天风
-     *     DEBUG<==      Total: 1
-     *     1088248166370832385
+     * DEBUG==>  Preparing: SELECT id,name FROM people WHERE name LIKE ? AND age < ?
+     * DEBUG==> Parameters: 王%(String), 40(Integer)
+     * TRACE<==    Columns: id, name
+     * TRACE<==        Row: 1088248166370832385, 王天风
+     * DEBUG<==      Total: 1
+     * 1088248166370832385
      * 查询两个字段，实际返回一个字段
      */
     @Test
@@ -73,7 +73,7 @@ public class SelectMapperOtherTest {
 
     /**
      * 不能加select列
-     *  SELECT COUNT( 1 ) FROM people WHERE name LIKE ? AND age < ?
+     * SELECT COUNT( 1 ) FROM people WHERE name LIKE ? AND age < ?
      */
     @Test
     public void selectCount() {

@@ -1,7 +1,6 @@
 package com.geekerstar;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-
 import com.geekerstar.mp.advance.dao.UserMapper;
 import com.geekerstar.mp.advance.entity.User;
 import org.junit.Test;

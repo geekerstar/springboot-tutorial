@@ -2,8 +2,9 @@ package com.geekerstar.springbootelasticjob.dao;
 
 import com.geekerstar.springbootelasticjob.model.AllOrder;
 import com.geekerstar.springbootelasticjob.model.AllOrderExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface AllOrderMapper {
     /**

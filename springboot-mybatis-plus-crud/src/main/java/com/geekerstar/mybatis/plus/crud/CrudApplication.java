@@ -13,6 +13,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.geekerstar.mybatis.plus.crud.mapper")
 public class CrudApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CrudApplication.class,args);
+        SpringApplication.run(CrudApplication.class, args);
     }
 }

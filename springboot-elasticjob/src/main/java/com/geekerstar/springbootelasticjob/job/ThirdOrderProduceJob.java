@@ -2,7 +2,6 @@ package com.geekerstar.springbootelasticjob.job;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
-import com.geekerstar.autoconfig.ElasticSimpleJob;
 import com.geekerstar.springbootelasticjob.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class ThirdOrderProduceJob implements SimpleJob {
     @Autowired
     private OrderService orderService;
+
     @Override
     public void execute(ShardingContext shardingContext) {
         orderService.produceThirdOrder();

@@ -2,7 +2,6 @@ package com.geekerstar.springbootelasticjob.job;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.dataflow.DataflowJob;
-import com.geekerstar.autoconfig.ElasticDataflowJob;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
@@ -37,8 +36,8 @@ public class MyDataflowJob implements DataflowJob<Integer> {
     public List<Integer> fetchData(ShardingContext shardingContext) {
         List<Integer> rtnList = new ArrayList<>();
         //数字 % 分片总数 == 当前分片项
-        for (Integer index : list){
-            if (index % shardingContext.getShardingTotalCount() == shardingContext.getShardingItem()){
+        for (Integer index : list) {
+            if (index % shardingContext.getShardingTotalCount() == shardingContext.getShardingItem()) {
                 rtnList.add(index);
                 break;
             }
@@ -50,7 +49,7 @@ public class MyDataflowJob implements DataflowJob<Integer> {
             e.printStackTrace();
         }
 
-        log.info("我是分片项："+shardingContext.getShardingItem()+"，我是抓取的数据是："+rtnList);
+        log.info("我是分片项：" + shardingContext.getShardingItem() + "，我是抓取的数据是：" + rtnList);
 
         return rtnList;
     }
@@ -63,6 +62,6 @@ public class MyDataflowJob implements DataflowJob<Integer> {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        log.info("我是分片项："+shardingContext.getShardingItem()+"我移除了数据："+data);
+        log.info("我是分片项：" + shardingContext.getShardingItem() + "我移除了数据：" + data);
     }
 }

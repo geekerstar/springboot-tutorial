@@ -20,13 +20,13 @@ public class Role implements Serializable {
     private String description;
 
     //角色与用户   多对多
-    @ManyToMany(mappedBy="roles")
+    @ManyToMany(mappedBy = "roles")
     private Set<User> users = new HashSet<User>(0);
 
     //角色与权限  多对多
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name="pe_role_permission",
-            joinColumns={@JoinColumn(name="role_id",referencedColumnName="id")},
-            inverseJoinColumns={@JoinColumn(name="permission_id",referencedColumnName="id")})
+    @JoinTable(name = "pe_role_permission",
+            joinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "permission_id", referencedColumnName = "id")})
     private Set<Permission> permissions = new HashSet<Permission>(0);
 }

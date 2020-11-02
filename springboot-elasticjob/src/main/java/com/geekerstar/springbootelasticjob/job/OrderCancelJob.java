@@ -2,7 +2,6 @@ package com.geekerstar.springbootelasticjob.job;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
-import com.geekerstar.autoconfig.ElasticSimpleJob;
 import com.geekerstar.springbootelasticjob.model.Order;
 import com.geekerstar.springbootelasticjob.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,15 +26,15 @@ public class OrderCancelJob implements SimpleJob {
     @Override
     public void execute(ShardingContext shardingContext) {
         Calendar now = Calendar.getInstance();
-        now.add(Calendar.SECOND,-30);
+        now.add(Calendar.SECOND, -30);
         //订单尾号 % 分片总数 == 当前分片项
         List<Order> orders = orderService.getOrder(now,
-                shardingContext.getShardingTotalCount(),shardingContext.getShardingItem());
+                shardingContext.getShardingTotalCount(), shardingContext.getShardingItem());
 
-        if (orders!=null&&orders.size()>0){
+        if (orders != null && orders.size() > 0) {
             ExecutorService es = Executors.newFixedThreadPool(4);
-            for(Order order : orders){
-                es.execute(()->{
+            for (Order order : orders) {
+                es.execute(() -> {
                     //更新条件
                     Integer orderId = order.getId();
                     Date updateTime = order.getUpdateTime();
@@ -44,7 +43,7 @@ public class OrderCancelJob implements SimpleJob {
                     String updateUser = "system";
                     Date updateNow = new Date();
 
-                    orderService.cancelOrder(orderId,updateTime,status,updateUser,updateNow);
+                    orderService.cancelOrder(orderId, updateTime, status, updateUser, updateNow);
                 });
             }
             es.shutdown();

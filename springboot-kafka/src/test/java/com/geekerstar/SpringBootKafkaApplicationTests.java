@@ -23,7 +23,7 @@ public class SpringBootKafkaApplicationTests {
     public void sendMessage() throws InterruptedException {
         // 发送 1000 个消息
         for (int i = 0; i < 1000; i++) {
-            long orderId = i+1;
+            long orderId = i + 1;
             String orderNum = UUID.randomUUID().toString();
             kafkaProvider.sendMessage(orderId, orderNum, LocalDateTime.now());
         }

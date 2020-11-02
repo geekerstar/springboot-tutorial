@@ -2,8 +2,9 @@ package com.geekerstar.mapper;
 
 import com.geekerstar.entity.BsCity;
 import com.geekerstar.entity.BsCityExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface BsCityMapper {
     /**

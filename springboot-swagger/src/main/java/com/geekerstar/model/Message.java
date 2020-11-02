@@ -6,52 +6,52 @@ import java.util.Date;
 
 
 public class Message {
-	private Long id;
-	@ApiModelProperty(value = "消息体")
-	private String text;
-	@ApiModelProperty(value = "消息总结")
-	private String summary;
-	private Date createDate;
+    private Long id;
+    @ApiModelProperty(value = "消息体")
+    private String text;
+    @ApiModelProperty(value = "消息总结")
+    private String summary;
+    private Date createDate;
 
-	public Long getId() {
-		return this.id;
-	}
+    public Long getId() {
+        return this.id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public Date getCreateDate() {
-		return createDate;
-	}
+    public Date getCreateDate() {
+        return createDate;
+    }
 
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
 
-	public String getText() {
-		return this.text;
-	}
+    public String getText() {
+        return this.text;
+    }
 
-	public void setText(String text) {
-		this.text = text;
-	}
+    public void setText(String text) {
+        this.text = text;
+    }
 
-	public String getSummary() {
-		return this.summary;
-	}
+    public String getSummary() {
+        return this.summary;
+    }
 
-	public void setSummary(String summary) {
-		this.summary = summary;
-	}
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
 
-	@Override
-	public String toString() {
-		return "Message{" +
-				"id=" + id +
-				", text='" + text + '\'' +
-				", summary='" + summary + '\'' +
-				", createDate=" + createDate +
-				'}';
-	}
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", text='" + text + '\'' +
+                ", summary='" + summary + '\'' +
+                ", createDate=" + createDate +
+                '}';
+    }
 }

@@ -13,6 +13,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.geekerstar.mybatisplus.mapper")
 public class MybatisPlusApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MybatisPlusApplication.class,args);
+        SpringApplication.run(MybatisPlusApplication.class, args);
     }
 }

@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 自定义的公共异常处理器
- *      1.声明异常处理器
- *      2.对异常统一处理
+ * 1.声明异常处理器
+ * 2.对异常统一处理
  */
 @ControllerAdvice
 public class BaseExceptionHandler {
 
     @ExceptionHandler(value = AuthorizationException.class)
     @ResponseBody
-    public String error(HttpServletRequest request, HttpServletResponse response,AuthorizationException e) {
-		return "未授权";
+    public String error(HttpServletRequest request, HttpServletResponse response, AuthorizationException e) {
+        return "未授权";
     }
 }

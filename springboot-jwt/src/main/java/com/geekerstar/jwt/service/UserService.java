@@ -18,7 +18,7 @@ public class UserService {
         return userMapper.getUsers();
     }
 
-    public User selectById(long id){
+    public User selectById(long id) {
         return userMapper.selectByPrimaryKey(id);
     }
 }

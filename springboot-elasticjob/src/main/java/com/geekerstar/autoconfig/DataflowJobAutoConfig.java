@@ -38,11 +38,11 @@ public class DataflowJobAutoConfig {
     @PostConstruct
     public void initDataflowJob() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Map<String, Object> beans = applicationContext.getBeansWithAnnotation(ElasticDataflowJob.class);
-        for (Map.Entry<String, Object> entry : beans.entrySet()){
+        for (Map.Entry<String, Object> entry : beans.entrySet()) {
             Object instance = entry.getValue();
             Class<?>[] interfaces = instance.getClass().getInterfaces();
-            for (Class<?> superInterface : interfaces){
-                if (superInterface == DataflowJob.class){
+            for (Class<?> superInterface : interfaces) {
+                if (superInterface == DataflowJob.class) {
                     ElasticDataflowJob annotation = instance.getClass().getAnnotation(ElasticDataflowJob.class);
                     String jobName = annotation.jobName();
                     String cron = annotation.cron();
@@ -53,25 +53,25 @@ public class DataflowJobAutoConfig {
                     boolean isJobEvent = annotation.jobEvent();
                     Class<? extends ElasticJobListener>[] listeners = annotation.jobListner();
                     ElasticJobListener[] listenerInstances = null;
-                    if (listeners!=null && listeners.length>0){
+                    if (listeners != null && listeners.length > 0) {
                         listenerInstances = new ElasticJobListener[listeners.length];
                         int i = 0;
-                        for (Class<? extends ElasticJobListener> listener : listeners){
+                        for (Class<? extends ElasticJobListener> listener : listeners) {
                             ElasticJobListener listenerInstance = listener.getDeclaredConstructor().newInstance();
                             listenerInstances[i] = listenerInstance;
                             i++;
                         }
-                    }else {
+                    } else {
                         listenerInstances = new ElasticJobListener[0];
                     }
                     //job核心配置
                     JobCoreConfiguration jcc = JobCoreConfiguration
-                            .newBuilder(jobName,cron,shardingTotalCount)
+                            .newBuilder(jobName, cron, shardingTotalCount)
                             .build();
 
                     //job类型配置
                     DataflowJobConfiguration jtc = new DataflowJobConfiguration(jcc,
-                            instance.getClass().getCanonicalName(),streamingProcess);
+                            instance.getClass().getCanonicalName(), streamingProcess);
 
                     //job根的配置（LiteJobConfiguration）
                     LiteJobConfiguration ljc = LiteJobConfiguration
@@ -80,11 +80,11 @@ public class DataflowJobAutoConfig {
                             .overwrite(overwrite)
                             .build();
 
-                    if (isJobEvent){
+                    if (isJobEvent) {
                         JobEventConfiguration jec = new JobEventRdbConfiguration(dataSource);
-                        new SpringJobScheduler((ElasticJob) instance,zkCenter,ljc,jec,listenerInstances).init();
-                    }else {
-                        new SpringJobScheduler((ElasticJob) instance,zkCenter,ljc,listenerInstances).init();
+                        new SpringJobScheduler((ElasticJob) instance, zkCenter, ljc, jec, listenerInstances).init();
+                    } else {
+                        new SpringJobScheduler((ElasticJob) instance, zkCenter, ljc, listenerInstances).init();
                     }
                 }
             }

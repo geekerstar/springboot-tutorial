@@ -6,14 +6,14 @@ import java.util.List;
 
 public interface User1Mapper {
 
-	List<User> getAll();
+    List<User> getAll();
 
-	User getOne(Long id);
+    User getOne(Long id);
 
-	void insert(User user);
+    void insert(User user);
 
-	void update(User user);
+    void update(User user);
 
-	void delete(Long id);
+    void delete(Long id);
 
 }

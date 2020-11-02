@@ -36,16 +36,16 @@ public class SelectMapperTest {
 
     @Test
     public void selectBatchIds() {
-        List<People> peopleList = peopleMapper.selectBatchIds(Arrays.asList(1087982257332887555L,1087982257332887554L));
+        List<People> peopleList = peopleMapper.selectBatchIds(Arrays.asList(1087982257332887555L, 1087982257332887554L));
         Assert.assertEquals(2, peopleList.size());
         peopleList.forEach(System.out::println);
     }
 
     @Test
     public void selectByMap() {
-        Map<String,Object> columnMap = new HashMap<>();
-        columnMap.put("name","dyz");
-        columnMap.put("manager_id",null);
+        Map<String, Object> columnMap = new HashMap<>();
+        columnMap.put("name", "dyz");
+        columnMap.put("manager_id", null);
         List<People> peopleList = peopleMapper.selectByMap(columnMap);
         Assert.assertEquals(1, peopleList.size());
         peopleList.forEach(System.out::println);

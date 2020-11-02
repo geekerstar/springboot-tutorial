@@ -20,7 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
     @Bean
-    public Docket api(){
+    public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
@@ -30,7 +30,7 @@ public class SwaggerConfig {
                 .build();
     }
 
-    private ApiInfo apiInfo(){
+    private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 // 页面标题
                 .title("我是标题")
@@ -41,7 +41,7 @@ public class SwaggerConfig {
                 // 版本号
                 .version("1.0")
                 // 联系方式
-                .contact(new Contact("Geekerstar","https://www.geekerstar.com","247507792@qq.com"))
+                .contact(new Contact("Geekerstar", "https://www.geekerstar.com", "247507792@qq.com"))
                 .build();
     }
 }

@@ -35,9 +35,9 @@ public class DeleteTest {
      * DELETE FROM people WHERE id=?
      */
     @Test
-    public void deleteById(){
+    public void deleteById() {
         int rows = peopleMapper.deleteById(1208617644090568706L);
-        Assert.assertEquals(1,rows);
+        Assert.assertEquals(1, rows);
         log.info(" - deleteById - " + rows);
     }
 
@@ -46,10 +46,10 @@ public class DeleteTest {
      * DELETE FROM people WHERE id = ? AND age = ?
      */
     @Test
-    public void deleteByMap(){
+    public void deleteByMap() {
         Map<String, Object> columnMap = new HashMap<>();
-        columnMap.put("id",1208617417686245377L);
-        columnMap.put("age",22);
+        columnMap.put("id", 1208617417686245377L);
+        columnMap.put("age", 22);
         int rows = peopleMapper.deleteByMap(columnMap);
         Assert.assertEquals(1, rows);
         log.info(" - deleteByMap - " + rows);
@@ -60,7 +60,7 @@ public class DeleteTest {
      * DELETE FROM people WHERE id IN ( ? , ? )
      */
     @Test
-    public void deleteBatchIds(){
+    public void deleteBatchIds() {
         int rows = peopleMapper.deleteBatchIds(Arrays.asList(1208609579114967042L, 1087982257332887559L));
         Assert.assertEquals(2, rows);
         log.info(" - deleteBatchIds - " + rows);
@@ -71,7 +71,7 @@ public class DeleteTest {
      * DELETE FROM people WHERE age = ? OR age > ?
      */
     @Test
-    public void delete(){
+    public void delete() {
         LambdaQueryWrapper<People> lambdaQueryWrapper = Wrappers.<People>lambdaQuery();
         lambdaQueryWrapper.eq(People::getAge, 18).or().gt(People::getAge, 99);
         int rows = peopleMapper.delete(lambdaQueryWrapper);

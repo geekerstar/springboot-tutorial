@@ -20,11 +20,11 @@ public class FastjsonApplication /*extends WebMvcConfigurerAdapter*/ {
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         super.configureMessageConverters(converters);
         *//*
-         * 1、需要先定义一个 convert 转换消息的对象;
-         * 2、添加fastJson 的配置信息，比如：是否要格式化返回的json数据;
-         * 3、在convert中添加配置信息.
-         * 4、将convert添加到converters当中.
-         *//*
+     * 1、需要先定义一个 convert 转换消息的对象;
+     * 2、添加fastJson 的配置信息，比如：是否要格式化返回的json数据;
+     * 3、在convert中添加配置信息.
+     * 4、将convert添加到converters当中.
+     *//*
         // 1、需要先定义一个 convert 转换消息的对象;
         FastJsonHttpMessageConverter fastConverter = new FastJsonHttpMessageConverter();
 
@@ -56,8 +56,8 @@ public class FastjsonApplication /*extends WebMvcConfigurerAdapter*/ {
         //3、在convert中添加配置信息.
         fastConverter.setFastJsonConfig(fastJsonConfig);
 
-		HttpMessageConverter<?> converter = fastConverter;
-		return new HttpMessageConverters(converter);
+        HttpMessageConverter<?> converter = fastConverter;
+        return new HttpMessageConverters(converter);
     }
 
     /**

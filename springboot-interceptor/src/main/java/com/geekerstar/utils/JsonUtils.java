@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * 自定义响应结构, 转换类
- *
  */
 public class JsonUtils {
 

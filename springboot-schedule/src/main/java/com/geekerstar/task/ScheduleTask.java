@@ -17,13 +17,13 @@ public class ScheduleTask {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     @Scheduled(cron = "*/6 * * * * ?")
-    private void process(){
-        System.out.println("task is running"+(count++));
+    private void process() {
+        System.out.println("task is running" + (count++));
     }
 
     @Scheduled(fixedRate = 6000)
-    public void reportCurrentTime(){
-        System.out.println("现在时间是："+dateFormat.format(new Date()));
+    public void reportCurrentTime() {
+        System.out.println("现在时间是：" + dateFormat.format(new Date()));
 
     }
 }

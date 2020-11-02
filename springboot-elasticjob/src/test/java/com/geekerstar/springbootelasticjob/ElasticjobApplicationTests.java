@@ -14,7 +14,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Calendar;
 import java.util.List;
-import java.util.Random;
 
 import static java.util.stream.Collectors.toList;
 
@@ -34,32 +33,33 @@ public class ElasticjobApplicationTests {
     }
 
     @Test
-    public void testOrder(){
+    public void testOrder() {
         orderService.insertOrder();
     }
 
     @Test
-    public void testGetOrder(){
+    public void testGetOrder() {
         Calendar now = Calendar.getInstance();
-        now.add(Calendar.SECOND,-30);
+        now.add(Calendar.SECOND, -30);
 
         List<Order> orders = orderService.getOrder(now, 2, 1);
         System.out.println(orders.stream().map(Order::getId).collect(toList()));
     }
 
     @Test
-    public void testThirdOrder(){
+    public void testThirdOrder() {
         orderService.produceThirdOrder();
     }
 
     @Test
-    public void testGetJdOrder(){
+    public void testGetJdOrder() {
         List<JdOrder> notFetchedOrder = jdOrderMapper.getNotFetchedOrder(5);
         System.out.println(notFetchedOrder.size());
 
     }
+
     @Test
-    public void testGetTmallOrder(){
+    public void testGetTmallOrder() {
         List<TmallOrder> notFetchedOrder = tmallOrderMapper.getNotFetchedOrder(5);
         System.out.println(notFetchedOrder.size());
 

@@ -1,9 +1,26 @@
 /* head */
-.header{height: 65px; border-bottom: 1px solid #404553;  background-color: #393D49; color: #fff;}
-.logo{position: absolute; left: 0; top: 18px; color: white;font-size: 22px;}
-.logo img{width: 82px; height: 31px;}
-.logo small{
-	font-size: 10px;
+.header {
+    height: 65px;
+    border-bottom: 1px solid #404553;
+    background-color: #393D49;
+    color: #fff;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    color: white;
+    font-size: 22px;
+}
+
+.logo img {
+    width: 82px;
+    height: 31px;
+}
+
+.logo small {
+    font-size: 10px;
     position: relative;
     top: -5px;
     display: inline-block;
@@ -12,14 +29,25 @@
     vertical-align: super;
     border-radius: 57px;
     background: #7d8492;
-    }
-.version{margin: 0;font-family: Titillium Web,sans-serif;color: #fff;}
-.responseJson{padding: 0 0 50px 15px;}
+}
+
+.version {
+    margin: 0;
+    font-family: Titillium Web, sans-serif;
+    color: #fff;
+}
+
+.responseJson {
+    padding: 0 0 50px 15px;
+}
 
 /* body */
-.site-content {padding: 0 10px 0 10px}
-.method{
-	text-transform: uppercase;
+.site-content {
+    padding: 0 10px 0 10px
+}
+
+.method {
+    text-transform: uppercase;
     text-decoration: none;
     color: white;
     font-size: 0.7em;
@@ -33,13 +61,34 @@
     -khtml-border-radius: 2px;
     border-radius: 2px;
 }
-.delete{background-color: #a41e22;}
-.get{background-color: #0f6ab4;}
-.head{background-color: #ffd20f;}
-.options{background-color: #0f6ab4;}
-.patch{background-color: #D38042;}
-.post{background-color: #10a54a;}
-.put{background-color: #c5862b;}
+
+.delete {
+    background-color: #a41e22;
+}
+
+.get {
+    background-color: #0f6ab4;
+}
+
+.head {
+    background-color: #ffd20f;
+}
+
+.options {
+    background-color: #0f6ab4;
+}
+
+.patch {
+    background-color: #D38042;
+}
+
+.post {
+    background-color: #10a54a;
+}
+
+.put {
+    background-color: #c5862b;
+}
 
 /*
 .delete_body{backgroud-color:#faf5ee;}
@@ -51,8 +100,18 @@
 .put_body{background-color: #faf5ee;}
 */
 
-.red{color: red}
+.red {
+    color: red
+}
 
-/* µ×²¿ */
-.footer{line-height: 44px; text-align: center; background-color: #eee; color: #666; }
-.footer a{padding: 0 5px;}
+/* ï¿½×²ï¿½ */
+.footer {
+    line-height: 44px;
+    text-align: center;
+    background-color: #eee;
+    color: #666;
+}
+
+.footer a {
+    padding: 0 5px;
+}

@@ -1,15 +1,11 @@
 package com.geekerstar.freemarker.controller;
 
 import com.geekerstar.freemarker.method.SortMethod;
-import freemarker.template.SimpleSequence;
-import freemarker.template.TemplateModelException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.math.BigDecimal;
 import java.util.*;
 
 /**
@@ -62,11 +58,11 @@ public class FreemarkerController {
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             Student student = new Student();
-            student.setName(i+"name");
-            student.setSex(i+"sex");
+            student.setName(i + "name");
+            student.setSex(i + "sex");
             studentList.add(student);
         }
-        mv.addObject("student",studentList);
+        mv.addObject("student", studentList);
         return mv;
     }
 

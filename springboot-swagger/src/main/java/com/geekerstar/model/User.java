@@ -3,15 +3,15 @@ package com.geekerstar.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel(value="model", description = "用户实体")
+@ApiModel(value = "model", description = "用户实体")
 public class User {
-    @ApiModelProperty(value="id1",name = "id2")
+    @ApiModelProperty(value = "id1", name = "id2")
     private Long id;
-    @ApiModelProperty(value="用户名1",name = "用户名2")
+    @ApiModelProperty(value = "用户名1", name = "用户名2")
     private String username;
-    @ApiModelProperty(value="年龄",name = "年龄2")
+    @ApiModelProperty(value = "年龄", name = "年龄2")
     private int age;
-    @ApiModelProperty(value="密码1",name = "密码2")
+    @ApiModelProperty(value = "密码1", name = "密码2")
     private String password;
 
 

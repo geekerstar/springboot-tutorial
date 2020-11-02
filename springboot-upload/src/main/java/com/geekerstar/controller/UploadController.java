@@ -23,30 +23,30 @@ public class UploadController {
     private static String UPLOAD_FOLDER = "//work//ideaprojects//springboot-tutorial//springboot-upload//src//main//resources//upload//";
 
     @GetMapping("/")
-    public String index(){
+    public String index() {
         return "upload";
     }
 
     @PostMapping("/upload")
-    public String singleFileUpload(@RequestParam("file")MultipartFile file, RedirectAttributes redirectAttributes)  {
-        if (file.isEmpty()){
-            redirectAttributes.addFlashAttribute("message","请选择一个文件上传");
+    public String singleFileUpload(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
+        if (file.isEmpty()) {
+            redirectAttributes.addFlashAttribute("message", "请选择一个文件上传");
             return "redirect:uploadStatus";
         }
 
         try {
             byte[] bytes = file.getBytes();
             Path path = Paths.get(UPLOAD_FOLDER + file.getOriginalFilename());
-            Files.write(path,bytes);
-            redirectAttributes.addFlashAttribute("message","你成功上传了'"+file.getOriginalFilename()+"'");
-        } catch (IOException e){
+            Files.write(path, bytes);
+            redirectAttributes.addFlashAttribute("message", "你成功上传了'" + file.getOriginalFilename() + "'");
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return "redirect:/uploadStatus";
     }
 
     @GetMapping("/uploadStatus")
-    public String uploadStatus(){
+    public String uploadStatus() {
         return "uploadStatus";
     }
 }

@@ -14,12 +14,12 @@ import lombok.extern.slf4j.Slf4j;
         shardingTotalCount = 10,
         jobStrategy = MyShardingStrategy.class,
         jobEvent = true,
-        jobListner = {MyNormalListener.class,MyNormalListener.class}
+        jobListner = {MyNormalListener.class, MyNormalListener.class}
 )
 @Slf4j
 public class MyShardingJob implements SimpleJob {
     @Override
     public void execute(ShardingContext shardingContext) {
-        log.info("我是分片项："+shardingContext.getShardingItem());
+        log.info("我是分片项：" + shardingContext.getShardingItem());
     }
 }

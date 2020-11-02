@@ -14,22 +14,23 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class UploadApplication {
     public static void main(String[] args) {
-        SpringApplication.run(UploadApplication.class,args);
+        SpringApplication.run(UploadApplication.class, args);
     }
 
     /**
      * 解决上传文件大于10M出现连接重置的问题。此异常内容 GlobalException 也捕获不到
+     *
      * @return
      */
     @Bean
-    public TomcatServletWebServerFactory tomcatEmbedded(){
+    public TomcatServletWebServerFactory tomcatEmbedded() {
         TomcatServletWebServerFactory tomcatServletWebServerFactory = new TomcatServletWebServerFactory();
         tomcatServletWebServerFactory.addConnectorCustomizers(connector -> {
-            if ((connector.getProtocolHandler() instanceof AbstractHttp11Protocol<?>)){
+            if ((connector.getProtocolHandler() instanceof AbstractHttp11Protocol<?>)) {
                 // -1 means unlimited
-                ((AbstractHttp11Protocol<?>)connector.getProtocolHandler()).setMaxSwallowSize(-1);
+                ((AbstractHttp11Protocol<?>) connector.getProtocolHandler()).setMaxSwallowSize(-1);
             }
         });
-                return tomcatServletWebServerFactory;
+        return tomcatServletWebServerFactory;
     }
 }
