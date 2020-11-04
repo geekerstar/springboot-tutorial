@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author dyz
+ * @author geekerstar
+ * @date 2020/11/4 16:38
+ * @description
  */
 @SpringBootApplication
 public class WebsocketApplication {
