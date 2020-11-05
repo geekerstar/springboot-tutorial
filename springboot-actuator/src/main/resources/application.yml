@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+
+server:
+  shutdown: immediate
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: shutdown,refresh,health,info

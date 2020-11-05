@@ -51,6 +51,7 @@
         <module>springboot-base</module>
         <module>springboot-webssh</module>
         <module>springboot-aop-limit</module>
+        <module>springboot-actuator</module>
     </modules>
     <packaging>pom</packaging>
 
