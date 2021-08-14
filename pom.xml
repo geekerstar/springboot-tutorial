@@ -9,10 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>springboot-aop</module>
-        <module>springboot-log4j2</module>
-        <module>springboot-helloworld</module>
         <module>springboot-interceptor</module>
-        <module>springboot-mail</module>
         <module>springboot-webflux</module>
         <module>springboot-freemarker-excel</module>
         <module>springboot-freemarker-sample</module>
@@ -29,16 +26,12 @@
         <module>springboot-package</module>
         <module>springboot-package-war</module>
         <module>springboot-upload</module>
-        <module>springboot-banner</module>
-        <module>springboot-command-line-runner</module>
         <module>springboot-swagger</module>
         <module>springboot-shiro</module>
         <module>springboot-elasticjob</module>
         <module>springboot-mybatis-generator</module>
         <module>springboot-flowable</module>
         <module>springboot-druid</module>
-        <module>springboot-exception</module>
-        <module>springboot-fastjson</module>
         <module>springboot-kafka</module>
         <module>springboot-jwt</module>
         <module>springboot-shiro-simple</module>
@@ -48,10 +41,8 @@
         <module>springboot-task</module>
         <module>springboot-websocket</module>
         <module>springboot-mybatis-plus-advance</module>
-        <module>springboot-base</module>
         <module>springboot-webssh</module>
         <module>springboot-aop-limit</module>
-        <module>springboot-actuator</module>
         <module>springboot-elasticsearch</module>
         <module>springboot-rabbitmq</module>
         <module>springboot-rocketmq</module>

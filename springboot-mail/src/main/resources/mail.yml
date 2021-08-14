@@ -1,8 +1,0 @@
-spring:
-  mail:
-    host: smtp.qq.com #发送邮件的服务器，笔者这里使用的 QQ 邮件
-    username: 你的邮箱地址
-    password: 授权码,或邮箱密码
-    properties.mail.smtp.auth: true
-    properties.mail.smtp.starttls.enable: true
-    default-encoding: utf-8
