@@ -18,18 +18,10 @@
         <module>springboot-thymeleaf</module>
         <module>springboot-jpa</module>
         <module>springboot-jpa-multi</module>
-        <module>springboot-mybatis-annotation</module>
-        <module>springboot-mybatis-annotation-multi</module>
-        <module>springboot-mybatis-xml</module>
-        <module>springboot-mybatis-xml-multi</module>
         <module>springboot-schedule</module>
-        <module>springboot-package</module>
-        <module>springboot-package-war</module>
         <module>springboot-upload</module>
-        <module>springboot-swagger</module>
         <module>springboot-shiro</module>
         <module>springboot-elasticjob</module>
-        <module>springboot-mybatis-generator</module>
         <module>springboot-flowable</module>
         <module>springboot-druid</module>
         <module>springboot-kafka</module>
@@ -37,7 +29,6 @@
         <module>springboot-shiro-simple</module>
         <module>springboot-mybatis-plus</module>
         <module>springboot-mybatis-plus-crud</module>
-        <module>springboot-resource</module>
         <module>springboot-task</module>
         <module>springboot-websocket</module>
         <module>springboot-mybatis-plus-advance</module>
