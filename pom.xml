@@ -37,6 +37,8 @@
         <module>springboot-elasticsearch</module>
         <module>springboot-rabbitmq</module>
         <module>springboot-rocketmq</module>
+        <module>springboot-admin</module>
+        <module>springboot-ace</module>
     </modules>
     <packaging>pom</packaging>
 
